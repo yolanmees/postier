@@ -24,13 +24,14 @@ Route::get('/connections', function () {
 });
 
 Route::get('/connections/new', function () {
-    return view('pages.connections.new', ['title' => 'New connection']);
+    return view('pages.connections.connection', ['title' => 'New connection']);
 });
 
 Route::get('/connections/{id}', function ($id) {
     $app_name = DB::table('apps')->where('app_id', $id)->value('app_name');
     return view('pages.connections.connection', ['title' => $app_name]);
 });
+
 
 /*
 Posts
