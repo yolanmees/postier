@@ -10,7 +10,9 @@
     <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
     <link href="/css/datepicker3.css" rel="stylesheet">
     <link href="/css/styles.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   </head>
   <body>
     @include('includes.sidebar')
@@ -21,7 +23,6 @@
 
 
 
-  	<script src="/js/jquery-1.11.1.min.js"></script>
   	<script src="/js/bootstrap.min.js"></script>
   	<script src="/js/chart.min.js"></script>
   	<script src="/js/chart-data.js"></script>

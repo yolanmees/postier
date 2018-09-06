@@ -1,9 +1,13 @@
 @extends('includes.theme')
 @section('content')
+<?php
+  use App\Http\Controllers\TestConnection;
+?>
 <div class="row">
   <div class="col-md-12">
     <div class="panel panel-default articles">
       <div class="panel-heading">
+        <button class="btn btn-success btn-save">Save</button>
         <ul class="pull-right panel-settings panel-button-tab-right">
 					<li class="dropdown"><a class="pull-right dropdown-toggle" data-toggle="dropdown" href="#">
 						<em class="fa fa-cogs"></em>
@@ -32,9 +36,9 @@
       </div>
       <div class="panel-body articles-container">
         <div class="controls">
-          <div class="col-md-12">
+          <div class="col-xs-12">
             <div class="row">
-              <div class="col-md-4">
+              <div class="col-sm-4">
                 <select class="form-control" name="">
                   <option selected="selected" value="HttpRequestAction">Request</option>
                   <option value="AssertAction">Assert</option>
@@ -43,12 +47,12 @@
                   <option value="JavascriptAction">JavaScript</option>
                 </select>
               </div>
-              <div class="col-md-8">
+              <div class="col-xs-8">
                 <input placeholder="Step Name" class="step-name form-control" type="text" name="" />
               </div>
               <div class="collapse-container collapse in" id="via-js">
-                <div class="col-md-4">
-                  <select class="http-method-select form-control" name="">
+                <div class="col-xs-4">
+                  <select class="http-method-select form-control postier-type-http" name="">
                     <option selected="selected" value="GET">GET</option>
                     <option value="POST">POST</option>
                     <option value="PUT">PUT</option>
@@ -58,27 +62,32 @@
                     <option value="OPTIONS">OPTIONS</option>
                   </select>
                 </div>
-                <div class="col-md-8">
-                  <input placeholder="URL" class="step-url form-control" type="text" value="" name="" />
+                <div class="col-xs-8">
+                  <input placeholder="URL" class="step-url form-control postier-url" type="text" value="" name="" />
                 </div>
-                <div class="col-md-12">
+                <div class="col-xs-12">
                   <div class="sublabel-left">Post Data</div>
                   <textarea data-show-for="" rows="5" class="form-control" style="font-family: monospace;" spellcheck="false" name=""></textarea>
                 </div>
-                <div class="col-md-12">
+                <div class="col-xs-12">
                   <div class="sublabel-left">Headers</div>
                   <div class="http-request-header items">
-                    <a class="http-request-header add font-12" href="#">+ Add Request Header</a>
+                    <a class="http-request-header-add font-12">+ Add Request Header</a>
                   </div>
-                  <div class="col-md-5 header-key">
+              </div>
+              <div class="col-xs-5 header-key">
 
-                  </div>
-                  <div class="col-md-1">
+              </div>
+              <div class="col-xs-1 header-equal text-center">
 
-                  </div>
-                  <div class="col-md-6 header-value">
+              </div>
+              <div class="col-xs-6 header-value">
 
-                  </div>
+              </div>
+              <div class="col-sm-12">
+                <a class="http-request-send font-12">Send</a>
+                <pre id="console">
+                </pre>
               </div>
             </div>
           </div>
@@ -87,4 +96,93 @@
     </div><!--End .articles-->
   </div>
 </div>
+<form id="signup-form" action="index.html" method="post">
+  {!! csrf_field() !!}
+</form>
+<script>
+var headerCount = 0;
+$( ".http-request-header-add" ).click(function() {
+  var headerKey = $( ".header-key" );
+    var headerKeyInput = document.createElement("input");
+    $(headerKeyInput).attr({
+      class: "form-control",
+      name: "headerKeyvalue-" + headerCount
+    });
+    headerKey.append(headerKeyInput);
+
+  var headerEqual = $( ".header-equal" );
+    var headerEqualSpan = document.createElement("span");
+    $(headerEqualSpan).attr({
+      class: "fa fa-equals fa-2x"
+    });
+    var headerEqualbr = document.createElement("br");
+    headerEqual.append(headerEqualSpan);
+    headerEqual.append(headerEqualbr);
+  var headerValue = $( ".header-value" );
+    var headerValueInput = document.createElement("input");
+    $(headerValueInput).attr({
+      class: "form-control",
+      name: "headerValuevalue-" + headerCount
+    });
+    headerValue.append(headerValueInput);
+    headerCount++;
+});
+
+
+
+$( ".http-request-send" ).click(function() {
+  var postierurl = $('.postier-url').val();
+  var postierTypeHttp = $('.postier-type-http').val();
+
+
+
+  $.ajax({
+    headers: { 'X-CSRF-TOKEN': $('#signup-form > input[name="_token"]').val() },
+    type: 'POST',
+    url: '/testConnection',
+    data: {
+      url: postierurl,
+      typeHttp: postierTypeHttp
+    },
+    dataType: 'json',
+    success: function (data)
+        {
+        console.log(data);
+        $('#console').text(JSON.stringify(data));
+        },
+    error: function (data)
+        {
+        console.log('Error:', data.responseText);
+        $('#console').text(JSON.stringify(data))
+        }
+    });
+});
+
+$( ".btn-save" ).click(function() {
+  var postierurl = $('.postier-url').val();
+  var postierTypeHttp = $('.postier-type-http').val();
+  var postierBody = $('.postier-body').val();
+$.ajax({
+  headers: { 'X-CSRF-TOKEN': $('#signup-form > input[name="_token"]').val() },
+  type: 'POST',
+  url: '/saveConnection',
+  data: {
+    url: postierurl,
+    typeHttp: postierTypeHttp
+  },
+  dataType: 'json',
+  success: function (data)
+      {
+      console.log(data);
+      $('#console').text(JSON.stringify(data));
+      },
+  error: function (data)
+      {
+      console.log('Error:', data.responseText);
+      $('#console').text(JSON.stringify(data))
+      }
+  });
+});
+
+</script>
 @stop

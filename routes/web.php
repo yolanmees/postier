@@ -40,3 +40,12 @@ Posts
 Route::get('/posts', function () {
     return view('pages.posts', ['title' => 'Posts']);
 });
+
+
+/*
+Classes for posts
+*/
+
+Route::any('/testConnection', 'TestConnection@tester');
+
+Route::any('/saveConnection', 'saveConnection@SaveConnToDB');
