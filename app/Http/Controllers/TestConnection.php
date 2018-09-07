@@ -10,7 +10,7 @@ class TestConnection
 
       $url = $_POST['url'];
       $typeHttp = $_POST['typeHttp'];
-
+      $body = $_POST['body'] ?? '';
       // Set some options - we are passing in a useragent too here
       curl_setopt_array($curl, array(
           CURLOPT_RETURNTRANSFER => 1,

@@ -3,6 +3,7 @@
 <?php
   use App\Http\Controllers\TestConnection;
 ?>
+
 <div class="row">
   <div class="col-md-12">
     <div class="panel panel-default articles">
@@ -38,7 +39,7 @@
         <div class="controls">
           <div class="col-xs-12">
             <div class="row">
-              <div class="col-sm-4">
+              <div class="col-sm-4" style="margin-top: 10px;">
                 <select class="form-control" name="">
                   <option selected="selected" value="HttpRequestAction">Request</option>
                   <option value="AssertAction">Assert</option>
@@ -47,7 +48,7 @@
                   <option value="JavascriptAction">JavaScript</option>
                 </select>
               </div>
-              <div class="col-xs-8">
+              <div class="col-xs-8 input-group">
                 <input placeholder="Step Name" class="step-name form-control" type="text" name="" />
               </div>
               <div class="collapse-container collapse in" id="via-js">
@@ -62,12 +63,31 @@
                     <option value="OPTIONS">OPTIONS</option>
                   </select>
                 </div>
-                <div class="col-xs-8">
-                  <input placeholder="URL" class="step-url form-control postier-url" type="text" value="" name="" />
+                <div class="col-xs-8 input-group">
+                  <input placeholder="URL" class="step-url form-control postier-url urlParamField" type="text" name="" aria-describedby="urlParamsOpen"/>
+                  <span class="input-group-addon btn-default" id="urlParamsOpen">URL parameters</span>
                 </div>
-                <div class="col-xs-12">
+                <div class="urlParamsDiv" style="display: none;">
+                    <div class="col-xs-12 ">
+                      <div class="sublabel-left"><a class="addURLParam"> + Add URL Parameters  </a></div>
+                    </div>
+                    <div class="col-xs-6">
+                      <div class="UrlKeys"><input class="form-control urlParamField" /></div>
+                    </div>
+                    <div class="col-xs-6 input-group">
+                      <div class="UrlValues"><input class="form-control urlParamField"/></div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+                <div class="col-xs-12 ">
                   <div class="sublabel-left">Post Data</div>
-                  <textarea data-show-for="" rows="5" class="form-control" style="font-family: monospace;" spellcheck="false" name=""></textarea>
+                  <textarea data-show-for="" rows="5" class="form-control input-group bodypost" style="font-family: monospace;" spellcheck="false" name=""></textarea>
                 </div>
                 <div class="col-xs-12">
                   <div class="sublabel-left">Headers</div>
@@ -99,41 +119,15 @@
 <form id="signup-form" action="index.html" method="post">
   {!! csrf_field() !!}
 </form>
+<script src="/js/postier/connection.js"></script>
 <script>
-var headerCount = 0;
-$( ".http-request-header-add" ).click(function() {
-  var headerKey = $( ".header-key" );
-    var headerKeyInput = document.createElement("input");
-    $(headerKeyInput).attr({
-      class: "form-control",
-      name: "headerKeyvalue-" + headerCount
-    });
-    headerKey.append(headerKeyInput);
-
-  var headerEqual = $( ".header-equal" );
-    var headerEqualSpan = document.createElement("span");
-    $(headerEqualSpan).attr({
-      class: "fa fa-equals fa-2x"
-    });
-    var headerEqualbr = document.createElement("br");
-    headerEqual.append(headerEqualSpan);
-    headerEqual.append(headerEqualbr);
-  var headerValue = $( ".header-value" );
-    var headerValueInput = document.createElement("input");
-    $(headerValueInput).attr({
-      class: "form-control",
-      name: "headerValuevalue-" + headerCount
-    });
-    headerValue.append(headerValueInput);
-    headerCount++;
-});
 
 
 
 $( ".http-request-send" ).click(function() {
   var postierurl = $('.postier-url').val();
   var postierTypeHttp = $('.postier-type-http').val();
-
+  var postierBody = $('.postier-body').val();
 
 
   $.ajax({
@@ -142,7 +136,8 @@ $( ".http-request-send" ).click(function() {
     url: '/testConnection',
     data: {
       url: postierurl,
-      typeHttp: postierTypeHttp
+      typeHttp: postierTypeHttp,
+      Body: postierBody
     },
     dataType: 'json',
     success: function (data)
