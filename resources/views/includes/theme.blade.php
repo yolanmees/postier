@@ -12,7 +12,10 @@
     <link href="/css/styles.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="/dist/jquery.jsonview.css">
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="/dist/jquery.jsonview.js"></script>
   </head>
   <body>
     @include('includes.sidebar')
@@ -32,13 +35,13 @@
   	<script src="/js/custom.js"></script>
   	<script>
     	window.onload = function () {
-      	var chart1 = document.getElementById("line-chart").getContext("2d");
-      	window.myLine = new Chart(chart1).Line(lineChartData, {
-      	responsive: true,
-      	scaleLineColor: "rgba(0,0,0,.2)",
-      	scaleGridLineColor: "rgba(0,0,0,.05)",
-      	scaleFontColor: "#c5c7cc"
-      	});
+      	// var chart1 = document.getElementById("line-chart");
+      	// window.myLine = new Chart(chart1).Line(lineChartData, {
+      	// responsive: true,
+      	// scaleLineColor: "rgba(0,0,0,.2)",
+      	// scaleGridLineColor: "rgba(0,0,0,.05)",
+      	// scaleFontColor: "#c5c7cc"
+      	// });
       };
   	</script>
 

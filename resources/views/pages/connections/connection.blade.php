@@ -105,9 +105,12 @@
 
               </div>
               <div class="col-sm-12">
-                <a class="http-request-send font-12">Send</a>
-                <pre id="console">
-                </pre>
+                <a class="http-request-send font-12 btn btn-default">Send</a>
+                <button class="btn btn-default" id="collapse-btn">Collapse</button>
+                <button class="btn btn-default" id="expand-btn">Expand</button>
+                  <div id="json">
+
+                  </div>
               </div>
             </div>
           </div>
@@ -121,7 +124,6 @@
 </form>
 <script src="/js/postier/connection.js"></script>
 <script>
-
 
 
 $( ".http-request-send" ).click(function() {
@@ -143,12 +145,36 @@ $( ".http-request-send" ).click(function() {
     success: function (data)
         {
         console.log(data);
-        $('#console').text(JSON.stringify(data));
+        var json = JSON.stringify(data,null,4);
+
+          $("#json").JSONView(json);
+
+          $("#json-collapsed").JSONView(json, { collapsed: true, nl2br: true, recursive_collapser: true });
+
+          $('#collapse-btn').on('click', function() {
+            $('#json').JSONView('collapse');
+          });
+
+          $('#expand-btn').on('click', function() {
+            $('#json').JSONView('expand');
+          });
         },
     error: function (data)
         {
         console.log('Error:', data.responseText);
-        $('#console').text(JSON.stringify(data))
+        var json = JSON.stringify(data,null,4);
+
+          $("#json").JSONView(json);
+
+          $("#json-collapsed").JSONView(json, { collapsed: true, nl2br: true, recursive_collapser: true });
+
+          $('#collapse-btn').on('click', function() {
+            $('#json').JSONView('collapse');
+          });
+
+          $('#expand-btn').on('click', function() {
+            $('#json').JSONView('expand');
+          });
         }
     });
 });
@@ -169,12 +195,12 @@ $.ajax({
   success: function (data)
       {
       console.log(data);
-      $('#console').text(JSON.stringify(data));
+      var json = JSON.stringify(data,null,4);
       },
   error: function (data)
       {
       console.log('Error:', data.responseText);
-      $('#console').text(JSON.stringify(data))
+
       }
   });
 });

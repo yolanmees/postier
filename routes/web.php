@@ -46,6 +46,6 @@ Route::get('/posts', function () {
 Classes for posts
 */
 
-Route::any('/testConnection', 'TestConnection@tester');
+Route::any('/testConnection', 'Controller@testFuncs');
 
-Route::any('/saveConnection', 'saveConnection@SaveConnToDB');
+Route::any('/saveConnection', 'Controller@SaveConnToDB');

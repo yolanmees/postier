@@ -1,10 +1,19 @@
 <?php
+namespace app\Http\Controllers;
 
-namespace App\Http\Controllers;
+use App\Http\Controllers\Controller;
+use App\Http\Manager\SubscriptionManager;
+use Illuminate\Support\Facades\Request;
 
-class TestConnection
+/**
+ * Class SubscriptionController
+ * @package App\Http\Controllers
+ */
+
+
+class TestConnection extends Controller
 {
-    function tester(){
+    function testFuncs(){
       // Get cURL resource
       $curl = curl_init();
 
@@ -15,7 +24,7 @@ class TestConnection
       curl_setopt_array($curl, array(
           CURLOPT_RETURNTRANSFER => 1,
           CURLOPT_CUSTOMREQUEST => $typeHttp,
-          CURLOPT_URL => $_POST['url'],
+          CURLOPT_URL => $_POST['url']
       ));
 
 
