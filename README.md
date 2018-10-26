@@ -3,11 +3,14 @@
 # postier
 Postier is an API automation platform, link and sync all your applications and send data to a database or google sheet.
 
+
 ## Installation
 `cd <app dir>`
 
 `composer install`
 
+## screenshot
+![Alt text](public/screenshots/1.png)
 
 ## Contribute
 Those who are interested may always give themselves up to contribute to Postier through our Facebook group
