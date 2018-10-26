@@ -1,9 +1,14 @@
 [![Open Source Love](https://badges.frapsoft.com/os/gpl/gpl.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 # postier
-HTTP request app. Connect all your apis together
+Postier is an API automation platform, link and sync all your applications and send data to a database or google sheet.
 
 ## Installation
 `cd <app dir>`
 
 `composer install`
+
+
+## Contribute
+Those who are interested may always give themselves up to contribute to Postier through our Facebook group
+https://www.facebook.com/groups/222905358270555/
