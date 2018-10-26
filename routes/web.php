@@ -57,13 +57,18 @@ APPS
 Route::get('/apps', function () {
     return view('pages.apps', ['title' => 'Apps']);
 });
-Route::any('/apps/getApps/ByCol/{appid}/{colid}', function ($appid, $colid) {
+
+Route::get('/apps/new', function () {
+    return view('pages.apps.new', ['title' => 'New App']);
+});
+
+Route::any('/collections/getApps/ByCol/{appid}/{colid}', function ($appid, $colid) {
     $requests = DB::table('request')
                                 ->where([
                                   ['collection_id', '=', $appid],
                                   ['collection_item_id', '=', $colid]
                                 ])->get();
-    return view('pages.apps.requestsByCol', ['title' => 'Apps'], ['data' => $requests]);
+    return view('collections.requestsByCol', ['title' => 'Apps'], ['data' => $requests]);
 });
 
 /*

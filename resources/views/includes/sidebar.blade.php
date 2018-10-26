@@ -71,7 +71,7 @@
   </form>
   <ul class="nav menu">
     <li class="{{ Request::is('/') ? 'active' : '' }}"><a href="/"><em class="fal fa-home"></em> Dashboard</a></li>
-    <li class="{{ Request::is('connections') ? 'active' : '' }}"><a href="/connections"><em class="fal fa-plug">&nbsp;</em> Connections</a></li>
+    <!-- <li class="{{ Request::is('connections') ? 'active' : '' }}"><a href="/connections"><em class="fal fa-plug">&nbsp;</em> Connections</a></li> -->
     <li class="{{ Request::is('collections') ? 'active' : '' }}"><a href="/collections"><em class="fal fa-folder">&nbsp;</em> Collections</a></li>
     <li class="{{ Request::is('apps') ? 'active' : '' }}"><a href="/apps"><em class="fal fa-rocket">&nbsp;</em> Apps</a></li>
     <li class="{{ Request::is('posts') ? 'active' : '' }}"><a href="/posts"><em class="fal fa-exchange-alt">&nbsp;</em> Posts</a></li>
