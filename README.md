@@ -20,6 +20,8 @@ Postier is an API automation platform, link and sync all your applications and s
 
 `composer install`
 
+`php artisan migrate`
+
 ## screenshot
 ![Alt text](public/screenshots/1.png)
 
