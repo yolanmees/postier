@@ -3,6 +3,14 @@
 # postier
 Postier is an API automation platform, link and sync all your applications and send data to a database or google sheet.
 
+# working features
+  Import Postman collection V1
+  Create/Save Http requests via UI
+
+# Coming features
+  Default applications
+  Transformers
+  Advanced workflow builder
 
 ## Installation
 `cd <app dir>`
