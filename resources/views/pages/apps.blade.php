@@ -1,8 +1,7 @@
 @extends('includes.theme')
 @section('content')
 
- <a href="/apps/new">
-   <button type="button" name="button" class="btn btn-success" >New</button>
+<button type="button" name="button" class="btn btn-success" >New</button>
  </a>
   <div class="panel panel-default">
 

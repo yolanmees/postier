@@ -6,11 +6,14 @@ Postier is an API automation platform, link and sync all your applications and s
 ## working features
 - Import Postman collection V1
 - Create/Save Http requests via UI
+- collection manager v1
 
 ## Coming features
 - Default applications
 - Transformers
 - Advanced workflow builder
+- collection manager v2
+- drag and drop ui for workflows
 
 ## Installation
 `cd <app dir>`

@@ -2,9 +2,10 @@
 @section('content')
 <?php
 use App\classes\UploadPostCol;
+use App\classes\functions\createTable;
  ?>
-
 <meta name="csrf-token" content="{{ csrf_token() }}" />
+
 <div class="row" style="margin: 10px 0px;">
   <div class="col-md-12" style="background: #fff;">
     <div class="row" style="margin: 10px;">
@@ -12,7 +13,7 @@ use App\classes\UploadPostCol;
       <button class="btn btn-warning postCol">Collection items</button>&nbsp;
       <button class="btn btn-warning postRequest">Requests</button>&nbsp;
       <button class="btn btn-warning postHeaders">Headers</button>&nbsp;
-      <button class="btn btn-warning postEnv">Envirement </button>&nbsp;
+      <button class="btn btn-warning postEnv">Enviromment</button>&nbsp;
       <div class="col-md-12">
         <h2>Environment</h2>
         <table class="table table-hover">
@@ -24,24 +25,20 @@ use App\classes\UploadPostCol;
          </thead>
          <tbody>
            <?php
-           $col_item['env'] = [];
-           $env = json_decode(file_get_contents('files/PhoneNumberApi.postman_environment.json'));
-           //var_dump($env->values);
-           $i = 0;
-           foreach ($env->values as $value) {
-             $col_item['env'][$i]['key'] = $value->key;
-             $col_item['env'][$i]['value'] = $value->value;
-             echo "<tr><td>".$value->key."</td><td>".$value->value."</td></tr>";
-             $i++;
-           }
+             $col_item['env'] = [];
+             $env = json_decode(file_get_contents('files/PhoneNumberApi.postman_environment.json'));
+             //var_dump($env->values);
+             $i = 0;
+             foreach ($env->values as $value) {
+               $col_item['env'][$i]['key'] = $value->key;
+               $col_item['env'][$i]['value'] = $value->value;
+               echo "<tr><td>".$value->key."</td><td>".$value->value."</td></tr>";
+               $i++;
+             }
             ?>
          </tbody>
        </table>
-      </div>
-
-
-
-
+      </div> 
 
 
         <div class="panel panel-default">
@@ -115,8 +112,6 @@ use App\classes\UploadPostCol;
               }
 
             }
-
-
 
             $col_item = array_merge($col_item, getItem($json->item, $col_item, $parentID, $colID));
            ?>
@@ -201,6 +196,8 @@ use App\classes\UploadPostCol;
     </div>
   </div>
 </div>
+<?php //$row = createTable::transformToRow($col_item['request']);   ?>
+<?php //echo createTable::createBasicTable(array('name', 'description'), array($row));   ?>
 
 
 <script>
@@ -209,70 +206,26 @@ use App\classes\UploadPostCol;
             var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
             $(".postCollection").click(function(){
                 $.ajax({
-                    /* the route pointing to the post function */
-                    url: '/collection/save/collection',
-                    type: 'POST',
-                    /* send the csrf-token and the input to the controller */
+                    url: '/collection/save/collection', type: 'POST', dataType: 'JSON',
                     data: {_token: CSRF_TOKEN, message:$(".getinfo").val(), data: <?php echo json_encode($col_item['info']); ?> },
-                    dataType: 'JSON',
-                    /* remind that 'data' is the response of the AjaxController */
                     success: function (data) {
                        console.log(data);
                         $(".writeinfo").text(data.msg);
                         $.ajax({
-                            /* the route pointing to the post function */
-                            url: '/collection/save/col',
-                            type: 'POST',
-                            /* send the csrf-token and the input to the controller */
-                            data: {_token: CSRF_TOKEN, message:$(".getinfo").val(), data: <?php echo json_encode($col_item['col']); ?>, id_col: data },
-                            dataType: 'JSON',
-                            /* remind that 'data' is the response of the AjaxController */
-                            success: function (data) {
-                               console.log(data);
-                                $(".writeinfo").text(data);
-
-                            }
+                            url: '/collection/save/col',type: 'POST', dataType: 'JSON',
+                            data: {_token: CSRF_TOKEN, message:$(".getinfo").val(), id_col: data, data: <?php echo json_encode($col_item['col']); ?>}
                         });
                         $.ajax({
-                            /* the route pointing to the post function */
-                            url: '/collection/save/request',
-                            type: 'POST',
-                            /* send the csrf-token and the input to the controller */
-                            data: {_token: CSRF_TOKEN, message:$(".getinfo").val(), data: <?php echo json_encode($col_item['request']); ?>, id_col: data },
-                            dataType: 'JSON',
-                            /* remind that 'data' is the response of the AjaxController */
-                            success: function (data) {
-                               console.log(data);
-                                $(".writeinfo").text(data);
-
-
-                            }
+                            url: '/collection/save/request', type: 'POST', dataType: 'JSON'
+                            data: {_token: CSRF_TOKEN, message:$(".getinfo").val(), id_col: data, data: <?php echo json_encode($col_item['request']); ?>}
                         });
                         $.ajax({
-                            /* the route pointing to the post function */
-                            url: '/collection/save/headers',
-                            type: 'POST',
-                            /* send the csrf-token and the input to the controller */
-                            data: {_token: CSRF_TOKEN, message:$(".getinfo").val(), data: <?php echo json_encode($col_item['headers']); ?>, id_col: data },
-                            dataType: 'JSON',
-                            /* remind that 'data' is the response of the AjaxController */
-                            success: function (data) {
-                               console.log(data);
-                                $(".writeinfo").text(data);
-                            }
+                            url: '/collection/save/headers', type: 'POST', dataType: 'JSON'
+                            data: {_token: CSRF_TOKEN, message:$(".getinfo").val(), id_col: data, data: <?php echo json_encode($col_item['headers']); ?>}
                         });
                         $.ajax({
-                            /* the route pointing to the post function */
-                            url: '/collection/save/env',
-                            type: 'POST',
-                            /* send the csrf-token and the input to the controller */
-                            data: {_token: CSRF_TOKEN, message:$(".getinfo").val(), id_col: data  , data: <?php echo json_encode($col_item['env']); ?>},
-                            dataType: 'JSON',
-                            /* remind that 'data' is the response of the AjaxController */
-                            success: function (data) {
-                               console.log(data);
-                                $(".writeinfo").text(data);
-                            }
+                            url: '/collection/save/env', type: 'POST', dataType: 'JSON'
+                            data: {_token: CSRF_TOKEN, message:$(".getinfo").val(), id_col: data, data: <?php echo json_encode($col_item['env']); ?>}
                         });
                     }
                 });
@@ -284,13 +237,9 @@ use App\classes\UploadPostCol;
        var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
        $(".postCol").click(function(){
            $.ajax({
-               /* the route pointing to the post function */
-               url: '/collection/save/col',
-               type: 'POST',
-               /* send the csrf-token and the input to the controller */
+               url: '/collection/save/col', type: 'POST',  dataType: 'JSON',
                data: {_token: CSRF_TOKEN, message:$(".getinfo").val(), data: <?php echo json_encode($col_item['col']); ?>, id_col: 1 },
                dataType: 'JSON',
-               /* remind that 'data' is the response of the AjaxController */
                success: function (data) {
                   console.log(data);
                    $(".writeinfo").text(data.msg);
@@ -303,13 +252,9 @@ use App\classes\UploadPostCol;
       var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
       $(".postRequest").click(function(){
           $.ajax({
-              /* the route pointing to the post function */
-              url: '/collection/save/request',
-              type: 'POST',
-              /* send the csrf-token and the input to the controller */
+              url: '/collection/save/request',  type: 'POST',  dataType: 'JSON',
               data: {_token: CSRF_TOKEN, message:$(".getinfo").val(), id_col: 2 , data: <?php echo json_encode($col_item['request']); ?>, id_col: 2  },
               dataType: 'JSON',
-              /* remind that 'data' is the response of the AjaxController */
               success: function (data) {
                  console.log(data);
                   $(".writeinfo").text(data);
@@ -321,13 +266,9 @@ use App\classes\UploadPostCol;
      var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
      $(".postHeaders").click(function(){
          $.ajax({
-             /* the route pointing to the post function */
-             url: '/collection/save/headers',
-             type: 'POST',
-             /* send the csrf-token and the input to the controller */
+             url: '/collection/save/headers',  type: 'POST',  dataType: 'JSON',
              data: {_token: CSRF_TOKEN, message:$(".getinfo").val(), id_col: 2  , data: <?php echo json_encode($col_item['headers']); ?>},
              dataType: 'JSON',
-             /* remind that 'data' is the response of the AjaxController */
              success: function (data) {
                 console.log(data);
                  $(".writeinfo").text(data);
@@ -340,13 +281,8 @@ $(document).ready(function(){
     var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
     $(".postEnv").click(function(){
         $.ajax({
-            /* the route pointing to the post function */
-            url: '/collection/save/env',
-            type: 'POST',
-            /* send the csrf-token and the input to the controller */
+            url: '/collection/save/env',  type: 'POST',  dataType: 'JSON',
             data: {_token: CSRF_TOKEN, message:$(".getinfo").val(), id_col: 3  , data: <?php echo json_encode($col_item['env']); ?>},
-            dataType: 'JSON',
-            /* remind that 'data' is the response of the AjaxController */
             success: function (data) {
                console.log(data);
                 $(".writeinfo").text(data);
@@ -354,7 +290,7 @@ $(document).ready(function(){
         });
     });
 });
-   </script>
+</script>
 
 
 @stop
