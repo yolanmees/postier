@@ -4795,7 +4795,8 @@ textarea.input-group-sm>.input-group-btn>.btn {
 
 .nav>li {
     position: relative;
-    display: block
+    display: block;
+    width: 100%;
 }
 
 .nav>li>a {
@@ -5102,7 +5103,8 @@ textarea.input-group-sm>.input-group-btn>.btn {
     .container>.navbar-collapse,
     .container>.navbar-header {
         margin-right: 0;
-        margin-left: 0
+        margin-left: 0;
+        height: 60px;
     }
 }
 

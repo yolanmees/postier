@@ -866,7 +866,9 @@ a.label:hover, a.label:focus {
   border-radius: 0;
   padding: 10px 15px 10px 15px;
   background: #e9ecf2;
-  margin: 0; }
+  margin: 0;
+  width: 100%;
+}
 
 h1.page-header {
   margin-top: 20px;
@@ -1025,7 +1027,7 @@ h1.page-header {
 
 .fixed-table-pagination .pagination-detail {
   margin-top: 20px; }
-  
+
 p.back-link {
   text-align: center;
   margin-bottom: 20px;

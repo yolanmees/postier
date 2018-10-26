@@ -1,0 +1,82 @@
+{
+	"info": {
+		"name": "PhoneNumberApi",
+		"_postman_id": "d67823da-c840-4a8d-9eec-519d35b5ba90",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Api",
+			"description": "",
+			"item": [
+				{
+					"name": "PhoneNumberCheck",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://apilayer.net/api/validate?access_key=67f06ecba1c9613ae21c94834ebae9d5& number=0032468140800& country_code=&format=1",
+							"protocol": "http",
+							"host": [
+								"apilayer",
+								"net"
+							],
+							"path": [
+								"api",
+								"validate"
+							],
+							"query": [
+								{
+									"key": "access_key",
+									"value": "67f06ecba1c9613ae21c94834ebae9d5",
+									"equals": true
+								},
+								{
+									"key": " number",
+									"value": "0032468140800",
+									"equals": true
+								},
+								{
+									"key": " country_code",
+									"value": "",
+									"equals": true
+								},
+								{
+									"key": "format",
+									"value": "1",
+									"equals": true
+								}
+							]
+						},
+						"description": "Finds all webhooks"
+					},
+					"response": []
+				},
+				{
+					"name": "GetRandomUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://randomuser.me/api/",
+							"protocol": "https",
+							"host": [
+								"randomuser",
+								"me"
+							],
+							"path": [
+								"api",
+								""
+							]
+						},
+						"description": "Finds all webhooks"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
