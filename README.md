@@ -1,11 +1,11 @@
 [![Open Source Love](https://badges.frapsoft.com/os/gpl/gpl.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
-# postier
+# Postier
 Postier is an API automation platform, link and sync all your applications and send data to a database or google sheet.
 
 Import all your APIs and connect them together, get data, transform data and resend the data to somewhere else.
 
-## working features
+## Working features
 - Import Postman collection V1
 - Create/Save Http requests via UI
 - collection manager v1
@@ -24,7 +24,7 @@ Import all your APIs and connect them together, get data, transform data and res
 
 `php artisan migrate`
 
-## screenshot
+## Screenshot
 ![Alt text](public/screenshots/1.png)
 
 ## Contribute
