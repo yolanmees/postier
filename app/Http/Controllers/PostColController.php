@@ -23,6 +23,7 @@ class PostColController extends Controller
           'description' => $col['description'],
           'parrent_id' => $col['parent']
         ));
+        return;
       }
     }
 

@@ -73,8 +73,11 @@
     <li class="{{ Request::is('/') ? 'active' : '' }}"><a href="/"><em class="fal fa-home"></em> Dashboard</a></li>
     <!-- <li class="{{ Request::is('connections') ? 'active' : '' }}"><a href="/connections"><em class="fal fa-plug">&nbsp;</em> Connections</a></li> -->
     <li class="{{ Request::is('collections') ? 'active' : '' }}"><a href="/collections"><em class="fal fa-folder">&nbsp;</em> Collections</a></li>
+    <li class="{{ Request::is('collections/v2') ? 'active' : '' }}"><a href="/collections/v2"><em class="fal fa-folder">&nbsp;</em> Collections V2</a></li>
     <li class="{{ Request::is('apps') ? 'active' : '' }}"><a href="/apps"><em class="fal fa-rocket">&nbsp;</em> Apps</a></li>
-    <li class="{{ Request::is('posts') ? 'active' : '' }}"><a href="/posts"><em class="fal fa-exchange-alt">&nbsp;</em> Posts</a></li>
+    <li class="{{ Request::is('Workflows') ? 'active' : '' }}"><a href="/workflows"><em class="fal fa-retweet-alt">&nbsp;</em> Workflows</a></li>
+    <li class="{{ Request::is('queu') ? 'active' : '' }}"><a href="/queu"><em class="fal fa-exchange-alt">&nbsp;</em> Queu</a></li>
+    <li class="{{ Request::is('report') ? 'active' : '' }}"><a href="/report"><em class="fal fa-chart-line">&nbsp;</em> Reports</a></li>
     <li class="parent "><a data-toggle="collapse" href="#">
       <em class="fal fa-plus">&nbsp;</em> Multilevel <span data-toggle="collapse" href="#" class="icon pull-right"><em class="fal fa-plus"></em></span>
       </a>

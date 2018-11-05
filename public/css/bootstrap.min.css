@@ -7036,7 +7036,7 @@ button.close {
     left: 0;
     z-index: 1050;
     display: none;
-    overflow: hidden;
+    overflow: scroll;
     -webkit-overflow-scrolling: touch;
     outline: 0
 }

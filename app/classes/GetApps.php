@@ -63,5 +63,61 @@ class GetApps
   }
 
 
+  public static function getAllCollections()
+  {
+    $collections = DB::table('collection')->select('collection.id as collection_id', 'collection.name as collection_name')->get();
+    return $collections;
+  }
+
+  public static function getAllCollectionsHead($collection)
+  {
+    $collections = DB::table('collection_item')->select('collection_item.id', 'collection_item.name', 'collection_item.int_id')->where([['parrent_id', '=', '0'], ['collection_id', '=', $collection]])->get();
+    return $collections;
+  }
+
+  public static function getSubCollectionsHead($collection_id, $collection)
+  {
+    $collections = DB::table('collection_item')->where([['parrent_id', '=', $collection_id], ['collection_id', '=', $collection]])->get();
+    return $collections;
+  }
+
+  public static function getAllAppsHtmlV2($apps)
+  {
+    $html = "<ul id=\"tree1\">";
+    foreach ($apps as $app) {
+      $html .= "
+      <li><a href=\"#\" style=\"cursor:pointer;\">".$app->collection_name."</a>
+        <ul>
+      ";
+      foreach ($app->items as $item) {
+        //var_dump($item);
+        if($item->parrent_id == 0){
+          $itemId = substr($item->ext_id, 4);
+          $html .= "<li><b style=\"display: inline; cursor:pointer;\"
+                   class=\"SUB-".$item->ext_id."\"
+                   onclick=\"SubOpenCol('".$item->ext_id."')\">+</b>
+
+                <p style=\"display: inline; cursor:pointer;\"
+                   onclick=\"OpenRequest('".$app->collection_id."','".$item->int_id."')\"
+                   >".$item->name."</p><ul id=\"".$item->id."\"></ul></li>";
+        }else{
+          if(!empty($item->name)){
+            $html .= "<ul class=\"child-tree\" id=\"".$item->parrent_id."\" >
+                      <li class=\"COL-".$item->parrent_id." \"
+                     style=\"display: none; cursor:pointer;\"
+                     onclick=\"OpenRequest('".$app->collection_id."','".$item->int_id."')\">&nbsp;-&nbsp;-&nbsp;".$item->name."</li>
+                     </ul>";
+
+          }
+        }
+        //var_dump($item);
+      }
+      $html .= "</ul></li>
+      ";
+    }
+
+    return $html;
+  }
+
 
 }

@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('pages.home', ['title' => 'Dashboard']);
 });
 
+
 /*
 Connections
 */
@@ -32,6 +33,7 @@ Route::get('/connections/{id}', function ($id) {
     return view('pages.connections.connection', ['title' => $app_name]);
 });
 
+
 /*
 Collections
 */
@@ -39,10 +41,19 @@ Collections
 Route::get('/collections', function () {
     return view('pages.collections', ['title' => 'collections']);
 });
+Route::get('/collections/v2', function () {
+    return view('collections.index', ['title' => 'collections V2']);
+});
 Route::get('/collections/new', function () {
 
     return view('collections.new', ['title' => 'New collection']);
 });
+Route::get('/collections/postman', function () {
+
+    return view('collections.postman', ['title' => 'New collection']);
+});
+
+
 Route::any('/collection/save/collection', 'PostColController@insertCollection');
 Route::any('/collection/save/col', 'PostColController@insertCol');
 Route::any('/collection/save/request', 'PostColController@insertRequest');
@@ -62,6 +73,39 @@ Route::get('/apps/new', function () {
     return view('pages.apps.new', ['title' => 'New App']);
 });
 
+
+/*
+WORKFLOWS
+*/
+
+Route::get('/workflows', function () {
+    return view('workflows.index', ['title' => 'Workflows']);
+});
+Route::get('/workflows/edit', function () {
+    return view('workflows.index', ['title' => 'Workflows']);
+});
+
+
+// NEW
+Route::get('/workflows/new', function () {
+    return view('workflows.new', ['title' => 'New workflow']);
+});
+Route::any('/workflows/create/initWorkflowDB', 'CreateWorkflowController@initWorkflowDB');
+
+
+//EDIT
+Route::get('/workflows/edit/load/{id}', function ($id) {
+    return view('workflows.assets.loadWorkflow',['id' => $id], ['title' => 'edit']);
+});
+
+Route::get('/workflows/edit/{id}', function ($id) {
+  $name = DB::table('workflows')->where([['id', '=', $id]])->select('name')->get();
+    return view('workflows.edit',["id" => $id, "extended_title" => "<b>Edit workflow: </b>".$name[0]->name], ["title" => "Edit workflow"]);
+});
+
+Route::any('/workflows/finde/requests', 'CreateWorkflowController@findRequest');
+
+
 Route::any('/collections/getApps/ByCol/{appid}/{colid}', function ($appid, $colid) {
     $requests = DB::table('request')
                                 ->where([
@@ -71,12 +115,25 @@ Route::any('/collections/getApps/ByCol/{appid}/{colid}', function ($appid, $coli
     return view('collections.requestsByCol', ['title' => 'Apps'], ['data' => $requests]);
 });
 
+
 /*
-Posts
+QUEU
 */
 
-Route::get('/posts', function () {
-    return view('pages.posts', ['title' => 'Posts']);
+Route::get('/queu', function () {
+    return view('queu.index', ['title' => 'Queu']);
+});
+
+/*
+RAPPORTING
+*/
+
+Route::get('/report', function () {
+    return view('report.index', ['title' => 'Report']);
+});
+
+Route::get('/report/logs/requests', function () {
+    return view('report.requests_logs', ['title' => 'Report: Requests Logs']);
 });
 
 /*
@@ -89,12 +146,20 @@ Route::any('/saveConnection', 'Controller@SaveConnToDB');
 
 
 /*
+SEARCH
+*/
+
+Route::any('/search/collections', 'SearchController@searchCollections');
+
+
+/*
 Settings en user prefferences
 */
 
 Route::get('/settings', function () {
     return view('pages.settings', ['title' => 'Settings']);
 });
+
 
 
 /*

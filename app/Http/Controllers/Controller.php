@@ -25,14 +25,12 @@ class Controller extends BaseController
           CURLOPT_URL => $_POST['url']
       ));
 
-
-
-
       // Send the request & save response to $resp
       $resp = curl_exec($curl);
       // Close request to clear up some resources
       curl_close($curl);
-      $resp = json_decode($resp, true);
+
+      //$resp = json_decode($resp, true);
       return $resp;
     }
 

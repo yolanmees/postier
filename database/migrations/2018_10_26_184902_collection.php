@@ -26,7 +26,7 @@ class Collection extends Migration
             $table->string('value');
         });
 
-        Schema::create('collection_env', function (Blueprint $table) {
+        Schema::create('collection_item', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('int_id');
             $table->string('ext_id');

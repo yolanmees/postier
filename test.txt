@@ -1,0 +1,810 @@
+testing
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Class 'OAuth' not found
+
+  at /Applications/MAMP/htdocs/postier/app/classes/Steps.php:100
+     96|   public static function php_oauth($step, $response)
+     97|   {
+     98|     $auth = $step->php_oauth->auth;
+     99|     $nonce = substr(md5(uniqid('nonce_', true)),0,16);
+  > 100|     $oauthClient = new OAuth($auth->savedOAuth->consumer_key, $auth->savedOAuth->consumer_secret, $auth->savedOAuth->signing_method, OAUTH_AUTH_TYPE_AUTHORIZATION);
+    101|     $oauthClient->setToken($auth->savedOAuth->token, $auth->savedOAuth->secret);
+    102|     $oauthClient->disableRedirects();
+    103|     $headers = array('Content-Type' => 'application/json', 'Content_Type' => 'application/json', 'Accept' => '*/*');
+    104|     $oauthClient->fetch($step->php_oauth->url, array(), $step->php_oauth->methode, $headers);
+
+  Exception trace:
+
+  1   App\classes\Steps::php_oauth(Object(stdClass))
+      /Applications/MAMP/htdocs/postier/app/Console/Commands/runWorkflows.php:49
+
+  2   App\Console\Commands\runWorkflows::handle()
+      /Applications/MAMP/htdocs/postier/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:29
+
+  Please use the argument -v to see more details.
+
+   Whoops\Exception\ErrorException  : PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll' - dlopen(/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll, 9): image not found
+
+  at Unknown:0
+    1|
+
+testing
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Class 'OAuth' not found
+
+  at /Applications/MAMP/htdocs/postier/app/classes/Steps.php:100
+     96|   public static function php_oauth($step, $response)
+     97|   {
+     98|     $auth = $step->php_oauth->auth;
+     99|     $nonce = substr(md5(uniqid('nonce_', true)),0,16);
+  > 100|     $oauthClient = new OAuth($auth->savedOAuth->consumer_key, $auth->savedOAuth->consumer_secret, $auth->savedOAuth->signing_method, OAUTH_AUTH_TYPE_AUTHORIZATION);
+    101|     $oauthClient->setToken($auth->savedOAuth->token, $auth->savedOAuth->secret);
+    102|     $oauthClient->disableRedirects();
+    103|     $headers = array('Content-Type' => 'application/json', 'Content_Type' => 'application/json', 'Accept' => '*/*');
+    104|     $oauthClient->fetch($step->php_oauth->url, array(), $step->php_oauth->methode, $headers);
+
+  Exception trace:
+
+  1   App\classes\Steps::php_oauth(Object(stdClass))
+      /Applications/MAMP/htdocs/postier/app/Console/Commands/runWorkflows.php:49
+
+  2   App\Console\Commands\runWorkflows::handle()
+      /Applications/MAMP/htdocs/postier/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:29
+
+  Please use the argument -v to see more details.
+
+   Whoops\Exception\ErrorException  : PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll' - dlopen(/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll, 9): image not found
+
+  at Unknown:0
+    1|
+
+testing
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Class 'OAuth' not found
+
+  at /Applications/MAMP/htdocs/postier/app/classes/Steps.php:100
+     96|   public static function php_oauth($step, $response)
+     97|   {
+     98|     $auth = $step->php_oauth->auth;
+     99|     $nonce = substr(md5(uniqid('nonce_', true)),0,16);
+  > 100|     $oauthClient = new OAuth($auth->savedOAuth->consumer_key, $auth->savedOAuth->consumer_secret, $auth->savedOAuth->signing_method, OAUTH_AUTH_TYPE_AUTHORIZATION);
+    101|     $oauthClient->setToken($auth->savedOAuth->token, $auth->savedOAuth->secret);
+    102|     $oauthClient->disableRedirects();
+    103|     $headers = array('Content-Type' => 'application/json', 'Content_Type' => 'application/json', 'Accept' => '*/*');
+    104|     $oauthClient->fetch($step->php_oauth->url, array(), $step->php_oauth->methode, $headers);
+
+  Exception trace:
+
+  1   App\classes\Steps::php_oauth(Object(stdClass))
+      /Applications/MAMP/htdocs/postier/app/Console/Commands/runWorkflows.php:49
+
+  2   App\Console\Commands\runWorkflows::handle()
+      /Applications/MAMP/htdocs/postier/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:29
+
+  Please use the argument -v to see more details.
+
+   Whoops\Exception\ErrorException  : PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll' - dlopen(/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll, 9): image not found
+
+  at Unknown:0
+    1|
+
+testing
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Class 'OAuth' not found
+
+  at /Applications/MAMP/htdocs/postier/app/classes/Steps.php:100
+     96|   public static function php_oauth($step, $response)
+     97|   {
+     98|     $auth = $step->php_oauth->auth;
+     99|     $nonce = substr(md5(uniqid('nonce_', true)),0,16);
+  > 100|     $oauthClient = new OAuth($auth->savedOAuth->consumer_key, $auth->savedOAuth->consumer_secret, $auth->savedOAuth->signing_method, OAUTH_AUTH_TYPE_AUTHORIZATION);
+    101|     $oauthClient->setToken($auth->savedOAuth->token, $auth->savedOAuth->secret);
+    102|     $oauthClient->disableRedirects();
+    103|     $headers = array('Content-Type' => 'application/json', 'Content_Type' => 'application/json', 'Accept' => '*/*');
+    104|     $oauthClient->fetch($step->php_oauth->url, array(), $step->php_oauth->methode, $headers);
+
+  Exception trace:
+
+  1   App\classes\Steps::php_oauth(Object(stdClass))
+      /Applications/MAMP/htdocs/postier/app/Console/Commands/runWorkflows.php:49
+
+  2   App\Console\Commands\runWorkflows::handle()
+      /Applications/MAMP/htdocs/postier/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:29
+
+  Please use the argument -v to see more details.
+
+   Whoops\Exception\ErrorException  : PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll' - dlopen(/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll, 9): image not found
+
+  at Unknown:0
+    1|
+
+testing
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Class 'OAuth' not found
+
+  at /Applications/MAMP/htdocs/postier/app/classes/Steps.php:100
+     96|   public static function php_oauth($step, $response)
+     97|   {
+     98|     $auth = $step->php_oauth->auth;
+     99|     $nonce = substr(md5(uniqid('nonce_', true)),0,16);
+  > 100|     $oauthClient = new OAuth($auth->savedOAuth->consumer_key, $auth->savedOAuth->consumer_secret, $auth->savedOAuth->signing_method, OAUTH_AUTH_TYPE_AUTHORIZATION);
+    101|     $oauthClient->setToken($auth->savedOAuth->token, $auth->savedOAuth->secret);
+    102|     $oauthClient->disableRedirects();
+    103|     $headers = array('Content-Type' => 'application/json', 'Content_Type' => 'application/json', 'Accept' => '*/*');
+    104|     $oauthClient->fetch($step->php_oauth->url, array(), $step->php_oauth->methode, $headers);
+
+  Exception trace:
+
+  1   App\classes\Steps::php_oauth(Object(stdClass))
+      /Applications/MAMP/htdocs/postier/app/Console/Commands/runWorkflows.php:49
+
+  2   App\Console\Commands\runWorkflows::handle()
+      /Applications/MAMP/htdocs/postier/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:29
+
+  Please use the argument -v to see more details.
+
+   Whoops\Exception\ErrorException  : PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll' - dlopen(/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll, 9): image not found
+
+  at Unknown:0
+    1|
+
+testing
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Class 'OAuth' not found
+
+  at /Applications/MAMP/htdocs/postier/app/classes/Steps.php:100
+     96|   public static function php_oauth($step, $response)
+     97|   {
+     98|     $auth = $step->php_oauth->auth;
+     99|     $nonce = substr(md5(uniqid('nonce_', true)),0,16);
+  > 100|     $oauthClient = new OAuth($auth->savedOAuth->consumer_key, $auth->savedOAuth->consumer_secret, $auth->savedOAuth->signing_method, OAUTH_AUTH_TYPE_AUTHORIZATION);
+    101|     $oauthClient->setToken($auth->savedOAuth->token, $auth->savedOAuth->secret);
+    102|     $oauthClient->disableRedirects();
+    103|     $headers = array('Content-Type' => 'application/json', 'Content_Type' => 'application/json', 'Accept' => '*/*');
+    104|     $oauthClient->fetch($step->php_oauth->url, array(), $step->php_oauth->methode, $headers);
+
+  Exception trace:
+
+  1   App\classes\Steps::php_oauth(Object(stdClass))
+      /Applications/MAMP/htdocs/postier/app/Console/Commands/runWorkflows.php:49
+
+  2   App\Console\Commands\runWorkflows::handle()
+      /Applications/MAMP/htdocs/postier/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:29
+
+  Please use the argument -v to see more details.
+
+   Whoops\Exception\ErrorException  : PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll' - dlopen(/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll, 9): image not found
+
+  at Unknown:0
+    1|
+
+testing
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Class 'OAuth' not found
+
+  at /Applications/MAMP/htdocs/postier/app/classes/Steps.php:100
+     96|   public static function php_oauth($step, $response)
+     97|   {
+     98|     $auth = $step->php_oauth->auth;
+     99|     $nonce = substr(md5(uniqid('nonce_', true)),0,16);
+  > 100|     $oauthClient = new OAuth($auth->savedOAuth->consumer_key, $auth->savedOAuth->consumer_secret, $auth->savedOAuth->signing_method, OAUTH_AUTH_TYPE_AUTHORIZATION);
+    101|     $oauthClient->setToken($auth->savedOAuth->token, $auth->savedOAuth->secret);
+    102|     $oauthClient->disableRedirects();
+    103|     $headers = array('Content-Type' => 'application/json', 'Content_Type' => 'application/json', 'Accept' => '*/*');
+    104|     $oauthClient->fetch($step->php_oauth->url, array(), $step->php_oauth->methode, $headers);
+
+  Exception trace:
+
+  1   App\classes\Steps::php_oauth(Object(stdClass))
+      /Applications/MAMP/htdocs/postier/app/Console/Commands/runWorkflows.php:49
+
+  2   App\Console\Commands\runWorkflows::handle()
+      /Applications/MAMP/htdocs/postier/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:29
+
+  Please use the argument -v to see more details.
+
+   Whoops\Exception\ErrorException  : PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll' - dlopen(/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll, 9): image not found
+
+  at Unknown:0
+    1|
+
+testing
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Class 'OAuth' not found
+
+  at /Applications/MAMP/htdocs/postier/app/classes/Steps.php:100
+     96|   public static function php_oauth($step, $response)
+     97|   {
+     98|     $auth = $step->php_oauth->auth;
+     99|     $nonce = substr(md5(uniqid('nonce_', true)),0,16);
+  > 100|     $oauthClient = new OAuth($auth->savedOAuth->consumer_key, $auth->savedOAuth->consumer_secret, $auth->savedOAuth->signing_method, OAUTH_AUTH_TYPE_AUTHORIZATION);
+    101|     $oauthClient->setToken($auth->savedOAuth->token, $auth->savedOAuth->secret);
+    102|     $oauthClient->disableRedirects();
+    103|     $headers = array('Content-Type' => 'application/json', 'Content_Type' => 'application/json', 'Accept' => '*/*');
+    104|     $oauthClient->fetch($step->php_oauth->url, array(), $step->php_oauth->methode, $headers);
+
+  Exception trace:
+
+  1   App\classes\Steps::php_oauth(Object(stdClass))
+      /Applications/MAMP/htdocs/postier/app/Console/Commands/runWorkflows.php:49
+
+  2   App\Console\Commands\runWorkflows::handle()
+      /Applications/MAMP/htdocs/postier/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:29
+
+  Please use the argument -v to see more details.
+
+   Whoops\Exception\ErrorException  : PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll' - dlopen(/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll, 9): image not found
+
+  at Unknown:0
+    1|
+
+testing
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Class 'OAuth' not found
+
+  at /Applications/MAMP/htdocs/postier/app/classes/Steps.php:100
+     96|   public static function php_oauth($step, $response)
+     97|   {
+     98|     $auth = $step->php_oauth->auth;
+     99|     $nonce = substr(md5(uniqid('nonce_', true)),0,16);
+  > 100|     $oauthClient = new OAuth($auth->savedOAuth->consumer_key, $auth->savedOAuth->consumer_secret, $auth->savedOAuth->signing_method, OAUTH_AUTH_TYPE_AUTHORIZATION);
+    101|     $oauthClient->setToken($auth->savedOAuth->token, $auth->savedOAuth->secret);
+    102|     $oauthClient->disableRedirects();
+    103|     $headers = array('Content-Type' => 'application/json', 'Content_Type' => 'application/json', 'Accept' => '*/*');
+    104|     $oauthClient->fetch($step->php_oauth->url, array(), $step->php_oauth->methode, $headers);
+
+  Exception trace:
+
+  1   App\classes\Steps::php_oauth(Object(stdClass))
+      /Applications/MAMP/htdocs/postier/app/Console/Commands/runWorkflows.php:49
+
+  2   App\Console\Commands\runWorkflows::handle()
+      /Applications/MAMP/htdocs/postier/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:29
+
+  Please use the argument -v to see more details.
+
+   Whoops\Exception\ErrorException  : PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll' - dlopen(/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll, 9): image not found
+
+  at Unknown:0
+    1|
+
+testing
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Class 'OAuth' not found
+
+  at /Applications/MAMP/htdocs/postier/app/classes/Steps.php:100
+     96|   public static function php_oauth($step, $response)
+     97|   {
+     98|     $auth = $step->php_oauth->auth;
+     99|     $nonce = substr(md5(uniqid('nonce_', true)),0,16);
+  > 100|     $oauthClient = new OAuth($auth->savedOAuth->consumer_key, $auth->savedOAuth->consumer_secret, $auth->savedOAuth->signing_method, OAUTH_AUTH_TYPE_AUTHORIZATION);
+    101|     $oauthClient->setToken($auth->savedOAuth->token, $auth->savedOAuth->secret);
+    102|     $oauthClient->disableRedirects();
+    103|     $headers = array('Content-Type' => 'application/json', 'Content_Type' => 'application/json', 'Accept' => '*/*');
+    104|     $oauthClient->fetch($step->php_oauth->url, array(), $step->php_oauth->methode, $headers);
+
+  Exception trace:
+
+  1   App\classes\Steps::php_oauth(Object(stdClass))
+      /Applications/MAMP/htdocs/postier/app/Console/Commands/runWorkflows.php:49
+
+  2   App\Console\Commands\runWorkflows::handle()
+      /Applications/MAMP/htdocs/postier/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:29
+
+  Please use the argument -v to see more details.
+
+   Whoops\Exception\ErrorException  : PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll' - dlopen(/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll, 9): image not found
+
+  at Unknown:0
+    1|
+
+testing
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Class 'OAuth' not found
+
+  at /Applications/MAMP/htdocs/postier/app/classes/Steps.php:100
+     96|   public static function php_oauth($step, $response)
+     97|   {
+     98|     $auth = $step->php_oauth->auth;
+     99|     $nonce = substr(md5(uniqid('nonce_', true)),0,16);
+  > 100|     $oauthClient = new OAuth($auth->savedOAuth->consumer_key, $auth->savedOAuth->consumer_secret, $auth->savedOAuth->signing_method, OAUTH_AUTH_TYPE_AUTHORIZATION);
+    101|     $oauthClient->setToken($auth->savedOAuth->token, $auth->savedOAuth->secret);
+    102|     $oauthClient->disableRedirects();
+    103|     $headers = array('Content-Type' => 'application/json', 'Content_Type' => 'application/json', 'Accept' => '*/*');
+    104|     $oauthClient->fetch($step->php_oauth->url, array(), $step->php_oauth->methode, $headers);
+
+  Exception trace:
+
+  1   App\classes\Steps::php_oauth(Object(stdClass))
+      /Applications/MAMP/htdocs/postier/app/Console/Commands/runWorkflows.php:49
+
+  2   App\Console\Commands\runWorkflows::handle()
+      /Applications/MAMP/htdocs/postier/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:29
+
+  Please use the argument -v to see more details.
+
+   Whoops\Exception\ErrorException  : PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll' - dlopen(/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll, 9): image not found
+
+  at Unknown:0
+    1|
+
+testing
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Class 'OAuth' not found
+
+  at /Applications/MAMP/htdocs/postier/app/classes/Steps.php:100
+     96|   public static function php_oauth($step, $response)
+     97|   {
+     98|     $auth = $step->php_oauth->auth;
+     99|     $nonce = substr(md5(uniqid('nonce_', true)),0,16);
+  > 100|     $oauthClient = new OAuth($auth->savedOAuth->consumer_key, $auth->savedOAuth->consumer_secret, $auth->savedOAuth->signing_method, OAUTH_AUTH_TYPE_AUTHORIZATION);
+    101|     $oauthClient->setToken($auth->savedOAuth->token, $auth->savedOAuth->secret);
+    102|     $oauthClient->disableRedirects();
+    103|     $headers = array('Content-Type' => 'application/json', 'Content_Type' => 'application/json', 'Accept' => '*/*');
+    104|     $oauthClient->fetch($step->php_oauth->url, array(), $step->php_oauth->methode, $headers);
+
+  Exception trace:
+
+  1   App\classes\Steps::php_oauth(Object(stdClass))
+      /Applications/MAMP/htdocs/postier/app/Console/Commands/runWorkflows.php:49
+
+  2   App\Console\Commands\runWorkflows::handle()
+      /Applications/MAMP/htdocs/postier/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:29
+
+  Please use the argument -v to see more details.
+
+   Whoops\Exception\ErrorException  : PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll' - dlopen(/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll, 9): image not found
+
+  at Unknown:0
+    1|
+
+testing
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Class 'OAuth' not found
+
+  at /Applications/MAMP/htdocs/postier/app/classes/Steps.php:100
+     96|   public static function php_oauth($step, $response)
+     97|   {
+     98|     $auth = $step->php_oauth->auth;
+     99|     $nonce = substr(md5(uniqid('nonce_', true)),0,16);
+  > 100|     $oauthClient = new OAuth($auth->savedOAuth->consumer_key, $auth->savedOAuth->consumer_secret, $auth->savedOAuth->signing_method, OAUTH_AUTH_TYPE_AUTHORIZATION);
+    101|     $oauthClient->setToken($auth->savedOAuth->token, $auth->savedOAuth->secret);
+    102|     $oauthClient->disableRedirects();
+    103|     $headers = array('Content-Type' => 'application/json', 'Content_Type' => 'application/json', 'Accept' => '*/*');
+    104|     $oauthClient->fetch($step->php_oauth->url, array(), $step->php_oauth->methode, $headers);
+
+  Exception trace:
+
+  1   App\classes\Steps::php_oauth(Object(stdClass))
+      /Applications/MAMP/htdocs/postier/app/Console/Commands/runWorkflows.php:49
+
+  2   App\Console\Commands\runWorkflows::handle()
+      /Applications/MAMP/htdocs/postier/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:29
+
+  Please use the argument -v to see more details.
+
+   Whoops\Exception\ErrorException  : PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll' - dlopen(/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll, 9): image not found
+
+  at Unknown:0
+    1|
+
+testing
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Class 'OAuth' not found
+
+  at /Applications/MAMP/htdocs/postier/app/classes/Steps.php:100
+     96|   public static function php_oauth($step, $response)
+     97|   {
+     98|     $auth = $step->php_oauth->auth;
+     99|     $nonce = substr(md5(uniqid('nonce_', true)),0,16);
+  > 100|     $oauthClient = new OAuth($auth->savedOAuth->consumer_key, $auth->savedOAuth->consumer_secret, $auth->savedOAuth->signing_method, OAUTH_AUTH_TYPE_AUTHORIZATION);
+    101|     $oauthClient->setToken($auth->savedOAuth->token, $auth->savedOAuth->secret);
+    102|     $oauthClient->disableRedirects();
+    103|     $headers = array('Content-Type' => 'application/json', 'Content_Type' => 'application/json', 'Accept' => '*/*');
+    104|     $oauthClient->fetch($step->php_oauth->url, array(), $step->php_oauth->methode, $headers);
+
+  Exception trace:
+
+  1   App\classes\Steps::php_oauth(Object(stdClass))
+      /Applications/MAMP/htdocs/postier/app/Console/Commands/runWorkflows.php:49
+
+  2   App\Console\Commands\runWorkflows::handle()
+      /Applications/MAMP/htdocs/postier/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:29
+
+  Please use the argument -v to see more details.
+
+   Whoops\Exception\ErrorException  : PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll' - dlopen(/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll, 9): image not found
+
+  at Unknown:0
+    1|
+
+testing
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Class 'OAuth' not found
+
+  at /Applications/MAMP/htdocs/postier/app/classes/Steps.php:100
+     96|   public static function php_oauth($step, $response)
+     97|   {
+     98|     $auth = $step->php_oauth->auth;
+     99|     $nonce = substr(md5(uniqid('nonce_', true)),0,16);
+  > 100|     $oauthClient = new OAuth($auth->savedOAuth->consumer_key, $auth->savedOAuth->consumer_secret, $auth->savedOAuth->signing_method, OAUTH_AUTH_TYPE_AUTHORIZATION);
+    101|     $oauthClient->setToken($auth->savedOAuth->token, $auth->savedOAuth->secret);
+    102|     $oauthClient->disableRedirects();
+    103|     $headers = array('Content-Type' => 'application/json', 'Content_Type' => 'application/json', 'Accept' => '*/*');
+    104|     $oauthClient->fetch($step->php_oauth->url, array(), $step->php_oauth->methode, $headers);
+
+  Exception trace:
+
+  1   App\classes\Steps::php_oauth(Object(stdClass))
+      /Applications/MAMP/htdocs/postier/app/Console/Commands/runWorkflows.php:49
+
+  2   App\Console\Commands\runWorkflows::handle()
+      /Applications/MAMP/htdocs/postier/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:29
+
+  Please use the argument -v to see more details.
+
+   Whoops\Exception\ErrorException  : PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll' - dlopen(/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll, 9): image not found
+
+  at Unknown:0
+    1|
+
+testing
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Class 'OAuth' not found
+
+  at /Applications/MAMP/htdocs/postier/app/classes/Steps.php:100
+     96|   public static function php_oauth($step, $response)
+     97|   {
+     98|     $auth = $step->php_oauth->auth;
+     99|     $nonce = substr(md5(uniqid('nonce_', true)),0,16);
+  > 100|     $oauthClient = new OAuth($auth->savedOAuth->consumer_key, $auth->savedOAuth->consumer_secret, $auth->savedOAuth->signing_method, OAUTH_AUTH_TYPE_AUTHORIZATION);
+    101|     $oauthClient->setToken($auth->savedOAuth->token, $auth->savedOAuth->secret);
+    102|     $oauthClient->disableRedirects();
+    103|     $headers = array('Content-Type' => 'application/json', 'Content_Type' => 'application/json', 'Accept' => '*/*');
+    104|     $oauthClient->fetch($step->php_oauth->url, array(), $step->php_oauth->methode, $headers);
+
+  Exception trace:
+
+  1   App\classes\Steps::php_oauth(Object(stdClass))
+      /Applications/MAMP/htdocs/postier/app/Console/Commands/runWorkflows.php:49
+
+  2   App\Console\Commands\runWorkflows::handle()
+      /Applications/MAMP/htdocs/postier/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:29
+
+  Please use the argument -v to see more details.
+
+   Whoops\Exception\ErrorException  : PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll' - dlopen(/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll, 9): image not found
+
+  at Unknown:0
+    1|
+
+testing
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Class 'OAuth' not found
+
+  at /Applications/MAMP/htdocs/postier/app/classes/Steps.php:100
+     96|   public static function php_oauth($step, $response)
+     97|   {
+     98|     $auth = $step->php_oauth->auth;
+     99|     $nonce = substr(md5(uniqid('nonce_', true)),0,16);
+  > 100|     $oauthClient = new OAuth($auth->savedOAuth->consumer_key, $auth->savedOAuth->consumer_secret, $auth->savedOAuth->signing_method, OAUTH_AUTH_TYPE_AUTHORIZATION);
+    101|     $oauthClient->setToken($auth->savedOAuth->token, $auth->savedOAuth->secret);
+    102|     $oauthClient->disableRedirects();
+    103|     $headers = array('Content-Type' => 'application/json', 'Content_Type' => 'application/json', 'Accept' => '*/*');
+    104|     $oauthClient->fetch($step->php_oauth->url, array(), $step->php_oauth->methode, $headers);
+
+  Exception trace:
+
+  1   App\classes\Steps::php_oauth(Object(stdClass))
+      /Applications/MAMP/htdocs/postier/app/Console/Commands/runWorkflows.php:49
+
+  2   App\Console\Commands\runWorkflows::handle()
+      /Applications/MAMP/htdocs/postier/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:29
+
+  Please use the argument -v to see more details.
+
+   Whoops\Exception\ErrorException  : PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll' - dlopen(/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll, 9): image not found
+
+  at Unknown:0
+    1|
+
+testing
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Class 'OAuth' not found
+
+  at /Applications/MAMP/htdocs/postier/app/classes/Steps.php:100
+     96|   public static function php_oauth($step, $response)
+     97|   {
+     98|     $auth = $step->php_oauth->auth;
+     99|     $nonce = substr(md5(uniqid('nonce_', true)),0,16);
+  > 100|     $oauthClient = new OAuth($auth->savedOAuth->consumer_key, $auth->savedOAuth->consumer_secret, $auth->savedOAuth->signing_method, OAUTH_AUTH_TYPE_AUTHORIZATION);
+    101|     $oauthClient->setToken($auth->savedOAuth->token, $auth->savedOAuth->secret);
+    102|     $oauthClient->disableRedirects();
+    103|     $headers = array('Content-Type' => 'application/json', 'Content_Type' => 'application/json', 'Accept' => '*/*');
+    104|     $oauthClient->fetch($step->php_oauth->url, array(), $step->php_oauth->methode, $headers);
+
+  Exception trace:
+
+  1   App\classes\Steps::php_oauth(Object(stdClass))
+      /Applications/MAMP/htdocs/postier/app/Console/Commands/runWorkflows.php:49
+
+  2   App\Console\Commands\runWorkflows::handle()
+      /Applications/MAMP/htdocs/postier/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:29
+
+  Please use the argument -v to see more details.
+
+   Whoops\Exception\ErrorException  : PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll' - dlopen(/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll, 9): image not found
+
+  at Unknown:0
+    1|
+
+testing
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Class 'OAuth' not found
+
+  at /Applications/MAMP/htdocs/postier/app/classes/Steps.php:100
+     96|   public static function php_oauth($step, $response)
+     97|   {
+     98|     $auth = $step->php_oauth->auth;
+     99|     $nonce = substr(md5(uniqid('nonce_', true)),0,16);
+  > 100|     $oauthClient = new OAuth($auth->savedOAuth->consumer_key, $auth->savedOAuth->consumer_secret, $auth->savedOAuth->signing_method, OAUTH_AUTH_TYPE_AUTHORIZATION);
+    101|     $oauthClient->setToken($auth->savedOAuth->token, $auth->savedOAuth->secret);
+    102|     $oauthClient->disableRedirects();
+    103|     $headers = array('Content-Type' => 'application/json', 'Content_Type' => 'application/json', 'Accept' => '*/*');
+    104|     $oauthClient->fetch($step->php_oauth->url, array(), $step->php_oauth->methode, $headers);
+
+  Exception trace:
+
+  1   App\classes\Steps::php_oauth(Object(stdClass))
+      /Applications/MAMP/htdocs/postier/app/Console/Commands/runWorkflows.php:49
+
+  2   App\Console\Commands\runWorkflows::handle()
+      /Applications/MAMP/htdocs/postier/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:29
+
+  Please use the argument -v to see more details.
+
+   Whoops\Exception\ErrorException  : PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll' - dlopen(/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll, 9): image not found
+
+  at Unknown:0
+    1|
+
+testing
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Class 'OAuth' not found
+
+  at /Applications/MAMP/htdocs/postier/app/classes/Steps.php:100
+     96|   public static function php_oauth($step, $response)
+     97|   {
+     98|     $auth = $step->php_oauth->auth;
+     99|     $nonce = substr(md5(uniqid('nonce_', true)),0,16);
+  > 100|     $oauthClient = new OAuth($auth->savedOAuth->consumer_key, $auth->savedOAuth->consumer_secret, $auth->savedOAuth->signing_method, OAUTH_AUTH_TYPE_AUTHORIZATION);
+    101|     $oauthClient->setToken($auth->savedOAuth->token, $auth->savedOAuth->secret);
+    102|     $oauthClient->disableRedirects();
+    103|     $headers = array('Content-Type' => 'application/json', 'Content_Type' => 'application/json', 'Accept' => '*/*');
+    104|     $oauthClient->fetch($step->php_oauth->url, array(), $step->php_oauth->methode, $headers);
+
+  Exception trace:
+
+  1   App\classes\Steps::php_oauth(Object(stdClass))
+      /Applications/MAMP/htdocs/postier/app/Console/Commands/runWorkflows.php:49
+
+  2   App\Console\Commands\runWorkflows::handle()
+      /Applications/MAMP/htdocs/postier/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:29
+
+  Please use the argument -v to see more details.
+
+   Whoops\Exception\ErrorException  : PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll' - dlopen(/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll, 9): image not found
+
+  at Unknown:0
+    1|
+
+testing
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Class 'OAuth' not found
+
+  at /Applications/MAMP/htdocs/postier/app/classes/Steps.php:100
+     96|   public static function php_oauth($step, $response)
+     97|   {
+     98|     $auth = $step->php_oauth->auth;
+     99|     $nonce = substr(md5(uniqid('nonce_', true)),0,16);
+  > 100|     $oauthClient = new OAuth($auth->savedOAuth->consumer_key, $auth->savedOAuth->consumer_secret, $auth->savedOAuth->signing_method, OAUTH_AUTH_TYPE_AUTHORIZATION);
+    101|     $oauthClient->setToken($auth->savedOAuth->token, $auth->savedOAuth->secret);
+    102|     $oauthClient->disableRedirects();
+    103|     $headers = array('Content-Type' => 'application/json', 'Content_Type' => 'application/json', 'Accept' => '*/*');
+    104|     $oauthClient->fetch($step->php_oauth->url, array(), $step->php_oauth->methode, $headers);
+
+  Exception trace:
+
+  1   App\classes\Steps::php_oauth(Object(stdClass))
+      /Applications/MAMP/htdocs/postier/app/Console/Commands/runWorkflows.php:49
+
+  2   App\Console\Commands\runWorkflows::handle()
+      /Applications/MAMP/htdocs/postier/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:29
+
+  Please use the argument -v to see more details.
+
+   Whoops\Exception\ErrorException  : PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll' - dlopen(/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll, 9): image not found
+
+  at Unknown:0
+    1|
+
+testing
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Class 'OAuth' not found
+
+  at /Applications/MAMP/htdocs/postier/app/classes/Steps.php:100
+     96|   public static function php_oauth($step, $response)
+     97|   {
+     98|     $auth = $step->php_oauth->auth;
+     99|     $nonce = substr(md5(uniqid('nonce_', true)),0,16);
+  > 100|     $oauthClient = new OAuth($auth->savedOAuth->consumer_key, $auth->savedOAuth->consumer_secret, $auth->savedOAuth->signing_method, OAUTH_AUTH_TYPE_AUTHORIZATION);
+    101|     $oauthClient->setToken($auth->savedOAuth->token, $auth->savedOAuth->secret);
+    102|     $oauthClient->disableRedirects();
+    103|     $headers = array('Content-Type' => 'application/json', 'Content_Type' => 'application/json', 'Accept' => '*/*');
+    104|     $oauthClient->fetch($step->php_oauth->url, array(), $step->php_oauth->methode, $headers);
+
+  Exception trace:
+
+  1   App\classes\Steps::php_oauth(Object(stdClass))
+      /Applications/MAMP/htdocs/postier/app/Console/Commands/runWorkflows.php:49
+
+  2   App\Console\Commands\runWorkflows::handle()
+      /Applications/MAMP/htdocs/postier/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:29
+
+  Please use the argument -v to see more details.
+
+   Whoops\Exception\ErrorException  : PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll' - dlopen(/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll, 9): image not found
+
+  at Unknown:0
+    1|
+
+testing
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Class 'OAuth' not found
+
+  at /Applications/MAMP/htdocs/postier/app/classes/Steps.php:100
+     96|   public static function php_oauth($step, $response)
+     97|   {
+     98|     $auth = $step->php_oauth->auth;
+     99|     $nonce = substr(md5(uniqid('nonce_', true)),0,16);
+  > 100|     $oauthClient = new OAuth($auth->savedOAuth->consumer_key, $auth->savedOAuth->consumer_secret, $auth->savedOAuth->signing_method, OAUTH_AUTH_TYPE_AUTHORIZATION);
+    101|     $oauthClient->setToken($auth->savedOAuth->token, $auth->savedOAuth->secret);
+    102|     $oauthClient->disableRedirects();
+    103|     $headers = array('Content-Type' => 'application/json', 'Content_Type' => 'application/json', 'Accept' => '*/*');
+    104|     $oauthClient->fetch($step->php_oauth->url, array(), $step->php_oauth->methode, $headers);
+
+  Exception trace:
+
+  1   App\classes\Steps::php_oauth(Object(stdClass))
+      /Applications/MAMP/htdocs/postier/app/Console/Commands/runWorkflows.php:49
+
+  2   App\Console\Commands\runWorkflows::handle()
+      /Applications/MAMP/htdocs/postier/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:29
+
+  Please use the argument -v to see more details.
+
+   Whoops\Exception\ErrorException  : PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll' - dlopen(/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll, 9): image not found
+
+  at Unknown:0
+    1|
+
+testing
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Class 'OAuth' not found
+
+  at /Applications/MAMP/htdocs/postier/app/classes/Steps.php:100
+     96|   public static function php_oauth($step, $response)
+     97|   {
+     98|     $auth = $step->php_oauth->auth;
+     99|     $nonce = substr(md5(uniqid('nonce_', true)),0,16);
+  > 100|     $oauthClient = new OAuth($auth->savedOAuth->consumer_key, $auth->savedOAuth->consumer_secret, $auth->savedOAuth->signing_method, OAUTH_AUTH_TYPE_AUTHORIZATION);
+    101|     $oauthClient->setToken($auth->savedOAuth->token, $auth->savedOAuth->secret);
+    102|     $oauthClient->disableRedirects();
+    103|     $headers = array('Content-Type' => 'application/json', 'Content_Type' => 'application/json', 'Accept' => '*/*');
+    104|     $oauthClient->fetch($step->php_oauth->url, array(), $step->php_oauth->methode, $headers);
+
+  Exception trace:
+
+  1   App\classes\Steps::php_oauth(Object(stdClass))
+      /Applications/MAMP/htdocs/postier/app/Console/Commands/runWorkflows.php:49
+
+  2   App\Console\Commands\runWorkflows::handle()
+      /Applications/MAMP/htdocs/postier/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:29
+
+  Please use the argument -v to see more details.
+
+   Whoops\Exception\ErrorException  : PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll' - dlopen(/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll, 9): image not found
+
+  at Unknown:0
+    1|
+
+testing
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Class 'OAuth' not found
+
+  at /Applications/MAMP/htdocs/postier/app/classes/Steps.php:100
+     96|   public static function php_oauth($step, $response)
+     97|   {
+     98|     $auth = $step->php_oauth->auth;
+     99|     $nonce = substr(md5(uniqid('nonce_', true)),0,16);
+  > 100|     $oauthClient = new OAuth($auth->savedOAuth->consumer_key, $auth->savedOAuth->consumer_secret, $auth->savedOAuth->signing_method, OAUTH_AUTH_TYPE_AUTHORIZATION);
+    101|     $oauthClient->setToken($auth->savedOAuth->token, $auth->savedOAuth->secret);
+    102|     $oauthClient->disableRedirects();
+    103|     $headers = array('Content-Type' => 'application/json', 'Content_Type' => 'application/json', 'Accept' => '*/*');
+    104|     $oauthClient->fetch($step->php_oauth->url, array(), $step->php_oauth->methode, $headers);
+
+  Exception trace:
+
+  1   App\classes\Steps::php_oauth(Object(stdClass))
+      /Applications/MAMP/htdocs/postier/app/Console/Commands/runWorkflows.php:49
+
+  2   App\Console\Commands\runWorkflows::handle()
+      /Applications/MAMP/htdocs/postier/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:29
+
+  Please use the argument -v to see more details.
+
+   Whoops\Exception\ErrorException  : PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll' - dlopen(/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll, 9): image not found
+
+  at Unknown:0
+    1|
+
+testing
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Class 'OAuth' not found
+
+  at /Applications/MAMP/htdocs/postier/app/classes/Steps.php:100
+     96|   public static function php_oauth($step, $response)
+     97|   {
+     98|     $auth = $step->php_oauth->auth;
+     99|     $nonce = substr(md5(uniqid('nonce_', true)),0,16);
+  > 100|     $oauthClient = new OAuth($auth->savedOAuth->consumer_key, $auth->savedOAuth->consumer_secret, $auth->savedOAuth->signing_method, OAUTH_AUTH_TYPE_AUTHORIZATION);
+    101|     $oauthClient->setToken($auth->savedOAuth->token, $auth->savedOAuth->secret);
+    102|     $oauthClient->disableRedirects();
+    103|     $headers = array('Content-Type' => 'application/json', 'Content_Type' => 'application/json', 'Accept' => '*/*');
+    104|     $oauthClient->fetch($step->php_oauth->url, array(), $step->php_oauth->methode, $headers);
+
+  Exception trace:
+
+  1   App\classes\Steps::php_oauth(Object(stdClass))
+      /Applications/MAMP/htdocs/postier/app/Console/Commands/runWorkflows.php:49
+
+  2   App\Console\Commands\runWorkflows::handle()
+      /Applications/MAMP/htdocs/postier/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:29
+
+  Please use the argument -v to see more details.
+
+   Whoops\Exception\ErrorException  : PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll' - dlopen(/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll, 9): image not found
+
+  at Unknown:0
+    1|
+
+testing
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Class 'OAuth' not found
+
+  at /Applications/MAMP/htdocs/postier/app/classes/Steps.php:100
+     96|   public static function php_oauth($step, $response)
+     97|   {
+     98|     $auth = $step->php_oauth->auth;
+     99|     $nonce = substr(md5(uniqid('nonce_', true)),0,16);
+  > 100|     $oauthClient = new OAuth($auth->savedOAuth->consumer_key, $auth->savedOAuth->consumer_secret, $auth->savedOAuth->signing_method, OAUTH_AUTH_TYPE_AUTHORIZATION);
+    101|     $oauthClient->setToken($auth->savedOAuth->token, $auth->savedOAuth->secret);
+    102|     $oauthClient->disableRedirects();
+    103|     $headers = array('Content-Type' => 'application/json', 'Content_Type' => 'application/json', 'Accept' => '*/*');
+    104|     $oauthClient->fetch($step->php_oauth->url, array(), $step->php_oauth->methode, $headers);
+
+  Exception trace:
+
+  1   App\classes\Steps::php_oauth(Object(stdClass))
+      /Applications/MAMP/htdocs/postier/app/Console/Commands/runWorkflows.php:49
+
+  2   App\Console\Commands\runWorkflows::handle()
+      /Applications/MAMP/htdocs/postier/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:29
+
+  Please use the argument -v to see more details.
+
+   Whoops\Exception\ErrorException  : PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll' - dlopen(/Applications/MAMP/bin/php/php7.1.6/lib/php/extensions/no-debug-non-zts-20160303/php_xsl.dll, 9): image not found
+
+  at Unknown:0
+    1|
+

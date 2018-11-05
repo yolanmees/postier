@@ -48,7 +48,7 @@ class Requests extends Migration
             $table->string('type');
         });
 
-        Schema::create('request_body_formdata', function (Blueprint $table) {
+        Schema::create('request_body_raw', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('request_id');
             $table->integer('request_body_id');

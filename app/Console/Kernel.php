@@ -4,6 +4,7 @@ namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use DB;
 
 class Kernel extends ConsoleKernel
 {
@@ -13,7 +14,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+       'App\Console\Commands\testCommand',
     ];
 
     /**
@@ -24,8 +25,15 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
+        //$schedule->command('test:test')->everyMinute();
         // $schedule->command('inspire')
         //          ->hourly();
+        $tasks = DB::table('tasks')->get();
+        foreach ($tasks as $task) {
+          $frequency = $task->frequency;
+          $schedule->command('test:test')->everyMinute()->runInBackground()->appendOutputTo('test.txt');
+          $schedule->command("$task->function")->everyMinute()->runInBackground()->appendOutputTo('test.txt');
+        }
     }
 
     /**

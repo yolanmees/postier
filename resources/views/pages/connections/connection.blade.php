@@ -130,7 +130,7 @@ $( ".http-request-send" ).click(function() {
   var postierurl = $('.postier-url').val();
   var postierTypeHttp = $('.postier-type-http').val();
   var postierBody = $('.postier-body').val();
-
+  console.log(postierurl);
 
   $.ajax({
     headers: { 'X-CSRF-TOKEN': $('#signup-form > input[name="_token"]').val() },
@@ -161,7 +161,7 @@ $( ".http-request-send" ).click(function() {
         },
     error: function (data)
         {
-        console.log('Error:', data.responseText);
+        console.log('Error:', data);
         var json = JSON.stringify(data,null,4);
 
           $("#json").JSONView(json);
