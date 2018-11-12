@@ -78,6 +78,9 @@ foreach ($data as $request) {
 <script src="/js/postier/connection.js"></script>
 
 <script>
+
+
+
 var header = { 'X-CSRF-TOKEN': $('#signup-form > input[name="_token"]').val() };
 
 $( ".http-request-send" ).click(function() {

@@ -84,6 +84,9 @@ Route::get('/workflows', function () {
 Route::get('/workflows/edit', function () {
     return view('workflows.index', ['title' => 'Workflows']);
 });
+Route::get('/workflows/editor', function () {
+    return view('workflows.editor', ['title' => 'Workflows']);
+});
 
 
 // NEW
@@ -103,7 +106,7 @@ Route::get('/workflows/edit/{id}', function ($id) {
     return view('workflows.edit',["id" => $id, "extended_title" => "<b>Edit workflow: </b>".$name[0]->name], ["title" => "Edit workflow"]);
 });
 
-Route::any('/workflows/finde/requests', 'CreateWorkflowController@findRequest');
+Route::any('/workflows/find/requests', 'CreateWorkflowController@findRequest');
 
 
 Route::any('/collections/getApps/ByCol/{appid}/{colid}', function ($appid, $colid) {
@@ -114,6 +117,8 @@ Route::any('/collections/getApps/ByCol/{appid}/{colid}', function ($appid, $coli
                                 ])->get();
     return view('collections.requestsByCol', ['title' => 'Apps'], ['data' => $requests]);
 });
+
+
 
 
 /*

@@ -1,42 +1,24 @@
 @extends('includes.theme')
 @section('content')
-<div class="panel panel-container">
-  <div class="panel-body">
-    <div class="saved-steps">
 
-    </div>
-    <button id="newStep" type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Add step</button>
-  </div>
-</div>
+
+<!-- SAVED STEPS -->
+@include('workflows.savedSteps')
+
 <!-- NEW STEP -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1"  role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenterTitle">Add step</h5>
-        <button type="button" class="close" onclick="closeNewStep()" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        @include('workflows.newstep')
-      </div>
-      <div class="modal-footer">
-        <button type="button" id="close" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" disabled>Select</button>
-      </div>
-    </div>
-  </div>
-</div>
+@include('workflows.newstep')
+<form id="signup-form">
+  {!! csrf_field() !!}
+</form>
 <?php //echo $id; ?>
+<script type="text/javascript" src="/js/apps.js"></script>
 <script>
-  $.ajax({
-    type : 'get',
-    url : '{{URL::to('/workflows/edit/load/')}}' + '/{{ $id }}',
-    success:function(data){
-      $('.saved-steps').html(data);
-    }
-  });
+
+  var ContentofDiv = $('#txtDiv').html();
+  console.log(ContentofDiv);
+
+
+
 
   $('#newStep').click(function(){
    openNewStep()
@@ -55,6 +37,78 @@
   }
   $('#close').click(function(){
    closeNewStep()
+  });
+
+
+
+
+  var header = { 'X-CSRF-TOKEN': $('#signup-form > input[name="_token"]').val() };
+
+  $( ".http-request-send" ).click(function() {
+    var id = $(this).attr('id');
+    var postierurl = $('.postier-url-' + id).val();
+    var postierTypeHttp = $('.postier-type-http').val();
+    var postierBody = $('.postier-body').val();
+
+    $.ajax({headers: header,type: 'POST', url: '/testConnection',
+      data: {
+        url: postierurl,
+        typeHttp: postierTypeHttp,
+        Body: postierBody
+      },
+      dataType: 'json',
+      success: function (data)
+          {
+          console.log(data);
+          var json = JSON.stringify(data,null,4);
+          showJson(json, id)
+          },
+      error: function (data)
+          {
+          console.log('Error:', data.responseText);
+          var json = JSON.stringify(data,null,4);
+          showJson(json, id)
+          }
+      });
+  });
+
+  function showJson(json, id)
+  {
+    $("#json-" + id).JSONView(json);
+
+    $("#json-collapsed").JSONView(json, { collapsed: true, nl2br: true, recursive_collapser: true });
+
+    $('#collapse-btn-' + id).on('click', function() {
+      $('#json-' + id).JSONView('collapse');
+    });
+
+    $('#expand-btn-' + id).on('click', function() {
+      $('#json-' + id).JSONView('expand');
+    });
+  }
+
+
+  $( ".btn-save" ).click(function() {
+    var postierurl = $('.postier-url').val();
+    var postierTypeHttp = $('.postier-type-http').val();
+    var postierBody = $('.postier-body').val();
+    $.ajax({headers: header, type: 'POST', url: '/saveConnection',
+      data: {
+        url: postierurl,
+        typeHttp: postierTypeHttp
+      },
+    dataType: 'json',
+    success: function (data)
+        {
+        console.log(data);
+        var json = JSON.stringify(data,null,4);
+        },
+    error: function (data)
+        {
+        console.log('Error:', data.responseText);
+
+        }
+    });
   });
 
 </script>

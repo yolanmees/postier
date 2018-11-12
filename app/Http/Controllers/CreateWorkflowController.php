@@ -41,14 +41,12 @@ class CreateWorkflowController extends Controller
                 <thead>
                   <tr>
                     <th>Name</th>
-                    <th>Description</th>
                   </tr>
                 </thead>
                 <tbody>';
       foreach ($requests as $request) {
         $html .= '<tr>
                     <td>'.$request->name.'</td>
-                    <td>'.$request->description.'</td>
                   </tr>';
 
 

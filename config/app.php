@@ -108,6 +108,13 @@ return [
 
     'cipher' => 'AES-256-CBC',
 
+
+
+
+
+    'log_level' => env('APP_LOG_LEVEL', 'error'),
+
+
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers

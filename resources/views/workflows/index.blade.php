@@ -9,7 +9,7 @@ foreach ($workflows as $workflow) {
               <td>".$workflow->name."</td>
               <td>".$workflow->triggerBy."</td>
               <td> </td>
-              <td style=\"text-align: right;\"><button class=\"btn btn-success\">Rapport</button>&nbsp;<button class=\"btn btn-warning\">Edit</button>&nbsp;<button class=\"btn btn-dark\">Queu</button></td>
+              <td style=\"text-align: right;\"><button class=\"btn btn-success\">Rapport</button>&nbsp;<a href=\"/workflows/edit/".$workflow->id."\"><button class=\"btn btn-warning\">Edit</button></a>&nbsp;<button class=\"btn btn-dark\">Queu</button></td>
             </tr>";
 }
 ?>

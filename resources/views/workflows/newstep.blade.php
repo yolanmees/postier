@@ -14,31 +14,57 @@ foreach ($collections as $collection) {
 }
 
  ?>
- <div class="row collection-row">
-   <div class="col-md-12 ">
-     @include('search.search')
+ <div class="panel panel-container">
+   <div class="panel-body">
+     <center>
+       <button id="newStep" type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Add step</button>
+     </center><br />
    </div>
-     <div class="card-deck" style="padding: 15px;">
-       <?php echo $collection_cards; ?>
+ </div>
+ <div class="modal fade" id="exampleModalCenter" tabindex="-1"  role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+   <div class="modal-dialog modal-lg" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="exampleModalCenterTitle">Add step</h5>
+         <button type="button" class="close" onclick="closeNewStep()" data-dismiss="modal" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="modal-body">
+         <div class="row collection-row">
+           <div class="col-md-12 ">
+             @include('search.search')
+           </div>
+             <div class="card-deck" style="padding: 15px;">
+               <?php echo $collection_cards; ?>
 
+             </div>
+         </div>
+         <div class="row request-row" style="display:none;">
+
+         </div>
+       </div>
+     <div class="modal-footer">
+       <button type="button" id="close" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       <button type="button" class="btn btn-primary" disabled>Select</button>
      </div>
+   </div>
  </div>
- <div class="row request-row" style="display:none;">
-
- </div>
+</div>
 <script>
 function selectCollection(id){
   $('.collection-row').hide();
   $('.request-row').show();
   $.ajax({
     type : 'get',
-    url : '{{URL::to('/workflows/finde/requests')}}',
+    url : '{{URL::to('/workflows/find/requests')}}',
     data:{'id': id},
     success:function(data){
       $('.request-row').html(data);
     }
   });
 }
+
 
 
 
