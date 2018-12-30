@@ -11,12 +11,42 @@
     },
     "devDependencies": {
         "axios": "^0.18",
+        "babel-preset-react": "^6.23.0",
         "bootstrap": "^4.0.0",
-        "popper.js": "^1.12",
         "cross-env": "^5.1",
         "jquery": "^3.2",
         "laravel-mix": "^2.0",
         "lodash": "^4.17.5",
-        "vue": "^2.5.7"
-    }
+        "popper.js": "^1.12",
+        "react": "^16.6.3",
+        "react-dom": "^16.6.3",
+        "webpack-dev-server": "^3.1.10"
+    },
+    "name": "postier",
+    "description": "[![Open Source Love](https://badges.frapsoft.com/os/gpl/gpl.svg?v=102)](https://github.com/ellerbrock/open-source-badge/) [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/) # Postier Postier is an API automation platform, link and sync all your applications and send data to a database or google sheet.",
+    "version": "1.0.0",
+    "main": "webpack.mix.js",
+    "directories": {
+        "test": "tests"
+    },
+    "dependencies": {
+        "ajv": "^6.5.5",
+        "imagemin": "^6.0.0",
+        "npm-4": "^2.1.1",
+        "webpack-dev-middleware": "^3.4.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/yolanmees/postier.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/yolanmees/postier/issues"
+    },
+    "bin": {
+        "cross-env": "dist/bin/cross-env.js"
+    },
+    "homepage": "https://github.com/yolanmees/postier#readme"
 }

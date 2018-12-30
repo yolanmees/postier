@@ -87,6 +87,15 @@ Route::get('/workflows/edit', function () {
 Route::get('/workflows/editor', function () {
     return view('workflows.editor', ['title' => 'Workflows']);
 });
+//EDIT
+Route::get('/workflows/renderHTML/{vendor}/{app}/{step}', function ($vendor, $app, $step) {
+    return view('workflows.assets.editor.renderStepsHTML',['vendor' => $vendor, 'app' => $app, 'step' => $step]);
+});
+
+//TESTER
+Route::any('/workflows/test', function () {
+    return view('workflows.assets.testWorkflow');
+});
 
 
 // NEW
