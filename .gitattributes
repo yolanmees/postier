@@ -1,5 +1,6 @@
 * text=auto
 public/* linguist-vendored
+docker/* linguist-vendored
 *.css linguist-vendored
 *.js linguist-vendored
 *.scss linguist-vendored
