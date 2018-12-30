@@ -2,7 +2,7 @@
 public/* linguist-vendored
 docker/* linguist-vendored
 *.css linguist-vendored
-*.js linguist-vendored
+
 *.scss linguist-vendored
 *.less linguist-vendored
 CHANGELOG.md export-ignore
