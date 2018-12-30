@@ -1,7 +1,7 @@
 [![Open Source Love](https://badges.frapsoft.com/os/gpl/gpl.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 # Postier
-Postier is an API automation platform, link and sync all your applications and send data to a database or google sheet.
+Postier is an API automation platform build on laravel 5, link and sync all your applications and send data to a database or google sheet.
 
 Import all your APIs and connect them together, get data, transform data and resend the data to somewhere else.
 You can build workflows between multiple apps and apply logics to the data! 
