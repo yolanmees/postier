@@ -19,13 +19,20 @@ With a collection you can save HTTP requests to use in your in workflows. You ca
 ## Installation
 
 `git clone https://github.com/yolanmees/postier`
+
 `cd <app dir>`
+
 `cp .env.example .env`
 
+
 `composer install`
+
+
 `npm run dev`
 
 `php artisan key:generate`
+
+
 `php artisan migrate`
 
 
