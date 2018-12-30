@@ -6,17 +6,15 @@ Postier is an API automation platform, link and sync all your applications and s
 Import all your APIs and connect them together, get data, transform data and resend the data to somewhere else.
 You can build workflows between multiple apps and apply logics to the data! 
 
-## Working features
-- Import Postman collection V1
-- Create/Save Http requests via UI
-- collection manager v1
+## Features
 
-## Coming features
-- Default applications
-- Transformers
-- Advanced workflow builder
-- collection manager v2
-- drag and drop ui for workflows
+### Apps
+
+With apps you can make API calls just by connecting to the service and fill your parameters as a form. Use your response data from in the next step.
+
+### Collections
+
+With a collection you can save HTTP requests to use in your in workflows. You can also import your postman collection in to the postier collections. 
 
 ## Installation
 
@@ -29,6 +27,24 @@ You can build workflows between multiple apps and apply logics to the data!
 
 `php artisan key:generate`
 `php artisan migrate`
+
+
+## Working features
+- Import Postman collection V1
+- Create/Save Http requests via UI
+- Collection manager v1
+- workflow builder v1
+- App development process
+- App Manager and collections
+
+## Coming features
+- Default applications
+- Transformers
+- Advanced workflow builder
+- Collection manager v2
+- Drag and drop ui for workflows
+- App store
+
 
 ## Screenshot
 ![Alt text](public/screenshots/1.png)
