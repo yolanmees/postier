@@ -4,6 +4,7 @@
 Postier is an API automation platform, link and sync all your applications and send data to a database or google sheet.
 
 Import all your APIs and connect them together, get data, transform data and resend the data to somewhere else.
+You can build workflows between multiple apps and apply logics to the data! 
 
 ## Working features
 - Import Postman collection V1
@@ -18,10 +19,15 @@ Import all your APIs and connect them together, get data, transform data and res
 - drag and drop ui for workflows
 
 ## Installation
+
+`git clone https://github.com/yolanmees/postier`
 `cd <app dir>`
+`cp .env.example .env`
 
 `composer install`
+`npm run dev`
 
+`php artisan key:generate`
 `php artisan migrate`
 
 ## Screenshot
