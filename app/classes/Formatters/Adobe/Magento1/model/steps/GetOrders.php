@@ -35,17 +35,17 @@ class GetOrders extends steps
         \"id\": \"0\",
         \"type\": \"php_oauth\",
         \"methode\": \"GET\",
-        \"url\": \"https://www.switch.be/api/rest/orders?limit=1&order=entity_id&dir=dsc\",
+        \"url\": \"\",
         \"header\": {
         },
         \"auth\":{
           \"savedOAuth\": {
             \"type\": \"saved_oauth\",
-            \"consumer_key\": \"8bb00fec9bea00c19d5ac58dc7c2760b\",
-            \"consumer_secret\": \"a262f8c157b2104e88ac09076cc7bd9e\",
+            \"consumer_key\": \"\",
+            \"consumer_secret\": \"\",
             \"signing_method\": \"HMAC-SHA1\",
-            \"token\": \"904dc0f8512a981581b0a547cd364e99\",
-            \"secret\": \"86de54452af3923ed4eda082ccdc27dc\"
+            \"token\": \"\",
+            \"secret\": \"\"
           }
         }
       }
