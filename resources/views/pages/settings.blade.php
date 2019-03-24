@@ -2,8 +2,49 @@
 @section('content')
 <?php
 use App\classes\UsersAndRoles;
- ?>
-  <div class="panel panel-default">
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
+$user = auth()->user();
+?>
+
+
+<div class="row">
+  <div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">User settings
+				<span class="pull-right clickable panel-toggle"><em class="fal fa-eye-slash"></em></span></div>
+			<div class="panel-body">
+				<p>Name:</p>
+        <input class="form-control" type="text" name="role" value="<?php echo $user->name; ?>"><hr/>
+        <p>Email:</p>
+        <input class="form-control" type="text" name="role" value="<?php echo $user->email; ?>">
+			</div>
+		</div>
+  </div>
+</div>
+
+
+
+<div class="row">
+  <div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">Roles and permissions
+				<span class="pull-right clickable panel-toggle"><em class="fal fa-eye-slash"></em></span></div>
+			<div class="panel-body">
+				<p>Role:</p>
+        <select class="form-control" type="text" name="role">
+          <option value="<?php echo $user->getRoleNames()[0]; ?>"><?php echo $user->getRoleNames()[0]; ?></option>
+        </select>
+			</div>
+		</div>
+  </div>
+</div>
+
+
+
+
+
+  <!-- <div class="panel panel-default">
     <div class="panel-body tabs">
     	<ul class="nav nav-tabs">
     		<li class="active"><a href="#tab1" data-toggle="tab">My account</a></li>
@@ -63,9 +104,10 @@ use App\classes\UsersAndRoles;
     		</div>
     		<div class="tab-pane fade" id="tab3">
     			<h4>Settings</h4>
-    			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget rutrum purus. Donec hendrerit ante ac metus sagittis elementum. Mauris feugiat nisl sit amet neque luctus, a tincidunt odio auctor.</p>
+    			<p>Role:</p>
+          <?php //echo $user->getRoleNames(); ?>
     		</div>
     	</div>
     </div>
-  </div>
+  </div> -->
 @stop

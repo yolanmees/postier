@@ -28,8 +28,8 @@ class Kernel extends ConsoleKernel
         //$schedule->command('test:test')->everyMinute();
         // $schedule->command('inspire')
         //          ->hourly();
-        $tasks = DB::table('tasks')->get();
-        $id = [];
+        // $tasks = DB::table('tasks')->get();
+        // $id = [];
         //foreach ($tasks as $task) {
           //$frequency = $task->frequency;
           //$schedule->exec("/Applications/MAMP/bin/php/php7.1.6/bin/php /Applications/MAMP/htdocs/postier/artisan $task->function")

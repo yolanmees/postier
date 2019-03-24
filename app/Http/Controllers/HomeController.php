@@ -25,7 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        auth()->user()->assignRole('writer');
+        auth()->user()->assignRole('admin');
         return view('pages.home', ['title' => 'Dashboard']);
     }
 }
