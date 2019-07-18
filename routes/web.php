@@ -16,6 +16,11 @@ Route::get('/', function () {
 });
 
 
+Route::get('/test', function () {
+    return view('test.index', ['title' => 'Test']);
+});
+
+
 /*
 Connections
 */
@@ -38,9 +43,7 @@ Route::get('/connections/{id}', function ($id) {
 Collections
 */
 
-Route::get('/collections', function () {
-    return view('pages.collections', ['title' => 'collections']);
-});
+Route::get('/collections', 'PostColController@index');
 Route::get('/collections/v2', function () {
     return view('collections.index', ['title' => 'collections V2']);
 });
@@ -139,7 +142,7 @@ Route::get('/queu', function () {
 });
 
 /*
-RAPPORTING
+REPPORTING
 */
 
 Route::get('/report', function () {
@@ -170,9 +173,8 @@ Route::any('/search/collections', 'SearchController@searchCollections');
 Settings en user prefferences
 */
 
-Route::get('/settings', function () {
-    return view('pages.settings', ['title' => 'Settings']);
-});
+Route::get('/settings', 'backendController@settings');
+Route::get('/roles-and-permissions', 'backendController@roles');
 
 
 
