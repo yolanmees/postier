@@ -4,6 +4,20 @@ namespace App\Http\Controllers;
 use DB;
 class PostColController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    public static function index () {
+        return view('pages.collections', ['title' => 'collections']);
+    }
+
 
     public static function insertCollection()
     {

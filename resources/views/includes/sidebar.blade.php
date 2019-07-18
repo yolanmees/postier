@@ -78,15 +78,13 @@
     <li class="{{ Request::is('Workflows') ? 'active' : '' }}"><a href="/workflows"><em class="fal fa-retweet-alt">&nbsp;</em> Workflows</a></li>
     <li class="{{ Request::is('queu') ? 'active' : '' }}"><a href="/queu"><em class="fal fa-exchange-alt">&nbsp;</em> Queu</a></li>
     <li class="{{ Request::is('report') ? 'active' : '' }}"><a href="/report"><em class="fal fa-chart-line">&nbsp;</em> Reports</a></li>
-    <li class="parent "><a data-toggle="collapse" href="#">
-      <em class="fal fa-plus">&nbsp;</em> Multilevel <span data-toggle="collapse" href="#" class="icon pull-right"><em class="fal fa-plus"></em></span>
-      </a>
-      <ul class="children collapse" id="sub-item-1">
-        <li><a class="" href="#">
-          <span class="fal fa-arrow-right">&nbsp;</span> Sub Item 1
-        </a></li>
-      </ul>
-    </li>
-    <li><a href="/settings"><em class="fal fa-cog">&nbsp;</em> Settings</a></li>
+    <li class="parent "><a data-toggle="collapse" href="#sub-item-1" class="collapsed" aria-expanded="false">
+			<em class="fal fa-cog">&nbsp;</em> Settings <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right collapsed" aria-expanded="false"><i class="fa fa-plus"></i></span>
+			</a>
+			<ul class="children collapse" id="sub-item-1" aria-expanded="false" style="height: 0px;">
+        <li><a href="/settings"> Settings</a></li>
+				<li><a href="/roles-and-permissions">	Roles and permissions</a></li>
+			</ul>
+		</li>
   </ul>
 </div><!--/.sidebar-->

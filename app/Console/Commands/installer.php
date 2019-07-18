@@ -30,7 +30,7 @@ class installer extends Command
     public function __construct()
     {
         parent::__construct();
-        $role = Role::create(['name' => 'admin']);
+        //$role = Role::create(['name' => 'admin']);
     }
 
     /**
