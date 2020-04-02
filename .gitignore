@@ -11,5 +11,10 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+.DS_store
 .env
 .phpunit.result.cache
+package-lock.json
+yarn.lock
+composer.lock
+.DS_Store

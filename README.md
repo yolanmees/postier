@@ -13,7 +13,7 @@ With apps you can make API calls just by connecting to the service and fill your
 
 ### Collections
 
-With a collection you can save HTTP requests to use in your in workflows. You can also import your postman collection in to the postier collections. 
+With a collection you can save HTTP requests to use in your in workflows. You can also import your postman collection in to the postier collections.
 
 ## Installation
 
@@ -33,6 +33,7 @@ With a collection you can save HTTP requests to use in your in workflows. You ca
 
 
 `php artisan migrate`
+`php artisan db:seed`
 
 
 ## Working features
