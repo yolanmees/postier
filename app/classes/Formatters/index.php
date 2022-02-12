@@ -12,10 +12,10 @@ namespace App\classes\Formatters;
       {
           $apps = [];
           $apps_init = [
-              'magento1'=>'App\classes\Formatters\Adobe\Magento1\Magento1',
-              'magento2'=>'App\classes\Formatters\Adobe\Magento2\Magento2',
-              'googledocs'=>'App\classes\Formatters\Google\GoogleDocs\GoogleDocs',
-              'requests'=>'App\classes\Formatters\Postier\Requests\Requests',
+              'magento1'=>\App\classes\Formatters\Adobe\Magento1\Magento1::class,
+              'magento2'=>\App\classes\Formatters\Adobe\Magento2\Magento2::class,
+              'googledocs'=>\App\classes\Formatters\Google\GoogleDocs\GoogleDocs::class,
+              'requests'=>\App\classes\Formatters\Postier\Requests\Requests::class,
           ];
 
           foreach ($apps_init as $key => $value) {
