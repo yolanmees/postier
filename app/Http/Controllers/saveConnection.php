@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-class TestConnection
+class saveConnection
 {
-    function SaveConnToDB(){
-      return false;
+    public function SaveConnToDB()
+    {
+        return false;
     }
 }

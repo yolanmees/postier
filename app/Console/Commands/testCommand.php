@@ -2,8 +2,9 @@
 
 namespace App\Console\Commands;
 
-use Illuminate\Console\Command;
 use DB;
+use Illuminate\Console\Command;
+
 class testCommand extends Command
 {
     /**
@@ -37,8 +38,8 @@ class testCommand extends Command
      */
     public function handle()
     {
-      DB::table('test')->insert( array(
-        'name' => "test"
-      ));
+        DB::table('test')->insert([
+            'name' => 'test',
+        ]);
     }
 }
