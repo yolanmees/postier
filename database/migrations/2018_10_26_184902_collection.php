@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class Collection extends Migration
 {
@@ -35,7 +35,6 @@ class Collection extends Migration
             $table->string('name');
             $table->string('description');
         });
-
     }
 
     /**

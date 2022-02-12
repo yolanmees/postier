@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class QeueTrigger extends Migration
 {
@@ -13,7 +13,7 @@ class QeueTrigger extends Migration
      */
     public function up()
     {
-      DB::unprepared('CREATE TRIGGER queu_update_timestamp AFTER UPDATE ON `queu` FOR EACH ROW
+        DB::unprepared('CREATE TRIGGER queu_update_timestamp AFTER UPDATE ON `queu` FOR EACH ROW
             BEGIN
                 INSERT INTO queu (`updated_at`)
                 VALUES (now());

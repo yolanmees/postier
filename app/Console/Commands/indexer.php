@@ -37,6 +37,5 @@ class indexer extends Command
      */
     public function handle()
     {
-      
     }
 }
