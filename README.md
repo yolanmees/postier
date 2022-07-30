@@ -5,15 +5,6 @@ Postier is a Laravel API automation platform to transfer data and to sync apps. 
 
 Import all your APIs and connect them together, get data, transform data and resend the data to somewhere else.
 
-## Features
-
-### Apps
-
-With apps you can make API calls just by connecting to the service and fill your parameters as a form. Use your response data from in the next step.
-
-### Collections
-
-With a collection you can save HTTP requests to use in your in workflows. You can also import your postman collection in to the postier collections.
 
 ## Installation
 
@@ -37,21 +28,24 @@ With a collection you can save HTTP requests to use in your in workflows. You ca
 `php artisan db:seed`
 
 
-## Working features
-- Import Postman collection V1
-- Create/Save Http requests via UI
-- Collection manager v1
-- workflow builder v1
-- App development process
-- App Manager and collections
+## How it works
 
-## Coming features
-- Default applications
-- Transformers
-- Advanced workflow builder
-- Collection manager v2
-- Drag and drop ui for workflows
-- App store
+### Apps
+Apps are collections of Actions and Triggers, You can create, import or install apps via the app tab in the sidebar.
+
+### Connections
+Connect your app accounts to your Postier and use it in different workflows.
+
+### Actions
+Actions can be added as a step to Workflows, actions are able to send, receive and manipulate data.
+
+### Triggers
+Triggers are the first step in a workflow and starts the workflow when needed. 
+
+### Workflows
+Workflows
+
+
 
 
 ## Screenshot
