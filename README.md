@@ -43,7 +43,7 @@ Actions can be added as a step to Workflows, actions are able to send, receive a
 Triggers are the first step in a workflow and starts the workflow when needed. 
 
 ### Workflows
-Workflows
+Workflows are collections of steps
 
 
 
