@@ -1,54 +1,36 @@
-@extends('includes.theme')
+@extends('layout.app', [
+  'pagetitle'=> 'Workflows - Postier',
+  'title'=> 'Workflows',
+  'sidebar' => false,
+  'sideover' => false,
+  'newButton' => false,
+  'saveButton' => true,
+  'cancelButton' => true
+])
+
+@section('sidebar')
+  @include('apps.components.sidebar')
+@endsection
+
+
 @section('content')
-<?php if (empty($_GET)){ ?>
-<div class="panel panel-container">
-  <div class="container">
-    <form class="" action="{{URL::to('/workflows/create/initWorkflowDB')}}" method="post">
-      @csrf
-      <h3>How do you want to call this workflow?</h3>
-      <input class="form-control" type="text" name="name" value="" placeholder="Workflow Name"><br />
-      <h3>When do you want this workflow to run?</h3>
-      <select class="form-control" name="when" id="WhenToRun">
-        <option value="everyMinute">Every minute</option>
-        <option value="everyFiveMinutes">Every five minutes</option>
-        <option value="everyTenMinutes">Every ten minutes</option>
-        <option value="everyThirtyMinutes">Every thirty minutes</option>
-        <option value="hourly">Hourly</option>
-        <option value="daily">Daily (Runs at midnight)</option>
-        <option value="dailyAt">Daily at</option>
-        <option value="weekly">Weekly</option>
-        <option value="monthly">Monthly</option>
-        <option value="yearly">Yearly</option>
-        <option value="cron">('* * * * * *')</option>
-      </select><br />
-      <input name="when-2" id="when-2" class="form-control" style="display:none; margin-bottom: 5px;" />
-      <button class="btn btn-success" type="submit" name="button">Next</button>
-    </form><br />
-  </div>
-</div>
-<script type="text/javascript">
-$("#WhenToRun").on('change', function() {
-  if($("#WhenToRun").val() == 'dailyAt' || $("#WhenToRun").val() == 'cron'){
-    $("#when-2").show()
-  }else {
-    $("#when-2").hide()
-  }
-});
+  <form action="#" method="POST">
+   <div class="shadow sm:rounded-md sm:overflow-hidden">
+     <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
+       <div class="col-span-3 sm:col-span-2">
+         <label for="company-website" class="block text-sm font-medium text-gray-700"> Name </label>
+         <div class="mt-1 flex rounded-md shadow-sm">
+           <input type="text" name="company-website" id="company-website" class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-md sm:text-sm border-gray-300" placeholder="Name your app..">
+         </div>
+       </div>
+       <div>
+         <label for="about" class="block text-sm font-medium text-gray-700"> Description </label>
+         <div class="mt-1">
+           <textarea id="about" name="about" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="tell us a bit about the app..."></textarea>
+         </div>
+       </div>
 
-</script>
-<?php }elseif ($_GET['s'] == '200' && isset($_GET['n'])){ ?>
-
-<div class="panel panel-container">
-  <div class="panel-body">
-    <h3>Start workflow</h3><hr />
-    <a href="/workflows/edit/<?php echo $_GET['n']; ?>"><button class="btn btn-primary" type="button" name="button">Start to build your workflow</button></a>
-  </div>
-</div>
-
-<?php }elseif ($_GET['s'] == '500'){ ?>
-
-
-<?php }else{
-  echo '<meta http-equiv="refresh" content="0;url=/workflows/new" />';
-} ?>
-@stop
+     </div>
+   </div>
+ </form>
+@endsection
