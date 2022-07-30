@@ -31,6 +31,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/', [AppController::class, 'list'])->name('apps.list');
     Route::get('/new', [AppController::class, 'new'])->name('apps.new');
     Route::get('/add', [AppController::class, 'add'])->name('apps.add');
+    Route::get('/import', [AppController::class, 'import'])->name('apps.import');
     Route::get('/edit/{id}', [AppController::class, 'edit'])->name('apps.edit');
     Route::get('/save', [AppController::class, 'save'])->name('apps.save');
   });

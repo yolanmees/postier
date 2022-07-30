@@ -6,6 +6,7 @@
         <title>{{ $pagetitle ?? 'Postier'}}</title>
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <script src="//unpkg.com/alpinejs" defer></script>
+        <script src="https://cdn.tailwindcss.com"></script>
 
     </head>
     <body class="min-h-screen	h-full">

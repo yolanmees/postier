@@ -15,6 +15,9 @@ class AppController extends Controller
     public function add(){
       return view('apps.add');
     }
+    public function import(){
+      return view('apps.import');
+    }
     public function edit(){
       return view('apps.edit');
     }
