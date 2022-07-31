@@ -26,10 +26,9 @@
          </div>
        </div>
        <div>
-         <label for="about" class="block text-sm font-medium text-gray-700"> Description </label>
+         <label for="about" class="block text-sm font-medium text-gray-700"> Upload </label>
          <div class="mt-1">
-           <textarea id="about" name="about" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="tell us a bit about the app..."></textarea>
-         </div>
+           <input type="file" id="myFile" name="filename">
        </div>
 
      </div>
