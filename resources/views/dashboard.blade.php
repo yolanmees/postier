@@ -5,7 +5,7 @@
   'sideover' => false,
   'newButton' => false,
   'saveButton' => false,
-  'cancelButton' => "fun"
+  'cancelButton' => false
 ])
 
 @section('sidebar')

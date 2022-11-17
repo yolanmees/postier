@@ -1,7 +1,7 @@
 @extends('layout.app', [
   'pagetitle'=> 'The Postier - Apps',
   'title'=> 'Apps',
-  'sidebar' => false,
+  'sidebar' => true,
   'sideover' => false,
   'newButton' => false,
   'saveButton' => true,
