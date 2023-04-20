@@ -1,9 +1,10 @@
 [![Open Source Love](https://badges.frapsoft.com/os/gpl/gpl.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 # Postier
-Postier is a Laravel API automation platform to transfer data and to sync apps. You can build workflows with data and actions of multiple apps and apply logics to the data!
+Postier is a powerful automation tool built on top of Laravel framework that allows businesses, organizations and individuals to automate their workflows by integrating various web applications and services together. With Postier, users can easily create custom workflows, or "Flows" as they are called, by connecting different applications such as Gmail, Slack, Trello, Asana, and many more, and automate repetitive tasks.
 
-Import all your APIs and connect them together, get data, transform data and resend the data to somewhere else.
+We designed Postier to be user-friendly. Our goal is to create software that is easy for even non-technical users to create Flows without writing any code. It allows users to trigger actions based on certain events or conditions and control the flow of data between the connected applications. Our advanced features such as conditional logic, data mapping etc, gives users complete control over their workflows.
+Additionally, Postier can provide a wide range of pre-built integrations that users helps to speed up their automation processes. Postier supports over 2,000 web applications that allows for complex workflows and advanced use cases, making Postier a versatile tool for automation.
 
 ## Features
 
@@ -60,3 +61,5 @@ With a collection you can save HTTP requests to use in your in workflows. You ca
 ## Contribute
 Those who are interested may always give themselves up to contribute to Postier through our Facebook group
 https://www.facebook.com/groups/222905358270555/
+
+T
